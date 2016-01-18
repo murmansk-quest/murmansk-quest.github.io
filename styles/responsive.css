@@ -1,0 +1,416 @@
+@media all and (min-width: 1000px) {
+	header {
+		background: url(images/bg_header.jpg) no-repeat;
+		background-position: bottom;
+		background-size: 100% auto;
+	}
+}
+@media all and (min-width: 0) and (max-width: 1000px) {
+	header {
+		background: url(images/bg_header_min.jpg) no-repeat;
+	}
+}
+
+@media all and (min-width: 1500px) {
+	.quests_block {
+		max-width: 80%;
+		min-height: 900px;
+		margin: 0 auto;
+		position: relative;
+		top: 3em;
+	}
+}
+
+@media all and (min-width: 1650px) {
+	.quests_block {
+		max-width: 80%;
+		min-height: 950px;
+		margin: 0 auto;
+		position: relative;
+		top: 3em;
+	}
+}
+
+@media all and (min-width: 1750px) {
+	.quests_block {
+		max-width: 80%;
+		min-height: 1000px;
+		margin: 0 auto;
+		position: relative;
+		top: 3em;
+	}
+}
+
+@media all and (min-width: 1870px) {
+	.quests_block {
+		max-width: 80%;
+		min-height: 1050px;
+		margin: 0 auto;
+		position: relative;
+		top: 3em;
+	}
+}
+
+@media all and (min-width: 1950px) {
+	.quests_block {
+		max-width: 80%;
+		min-height: 1100px;
+		margin: 0 auto;
+		position: relative;
+		top: 3em;
+	}
+}
+
+@media all and (max-width: 1308px) {
+	header {
+		background-size: auto 100%;
+	}
+	footer nav a {
+		display: inline-block;
+		margin: 0 2em;
+		color: white;
+		border-bottom: 2px #f34c55 solid;
+		text-decoration: none;
+	}
+	.quests_block {
+		max-width: 92%;
+		margin: 0 auto;
+	}
+}
+
+@media all and (max-width: 1219px) {
+	.table {
+		width: 80%;
+	}
+	.to_top {
+		display: none;
+	}
+	.quests_block article {
+		width: 31em;
+	}
+}
+
+@media all and (max-width: 1100px) {
+	.table {
+		width: 100%;
+	}
+	.price_4 {
+		left: -83px;
+	}
+	.quests_block {
+		max-width: 98%;
+		min-height: 1150px;
+		margin: 0 auto;
+	}
+}
+
+@media all and (max-width: 1040px) {
+	header {
+		background: url(images/bg_header_min.jpg) no-repeat;
+		background-size: auto 100%;
+	}
+	nav a {
+		margin-left: 3em !important;	
+	}
+	footer nav a {
+		display: inline-block;
+		margin: 10px 0 0 0;
+		color: white;
+		border-bottom: 2px #f34c55 solid;
+		text-decoration: none;
+	}
+	.quests_block {
+		max-width: 100%;
+		min-height: 1490px;
+		margin: 0 auto;
+	}
+	.left_article {
+		float: none;
+		margin: 0 auto;
+		top: 0 !important;
+	}
+
+	.right_article {
+		float: none;
+		margin: 0 auto;
+		top: 0 !important;
+	}
+	.quests_block article {
+		margin-bottom: 3em;
+	}
+	.bottom_quest {
+		top: 0;
+	}
+	.present {
+		position: relative;
+		left: 0;
+	}
+	.pres {
+		display: inline-block;
+		position: absolute;
+		left: 0em;
+	}
+	.rectangle {
+		display: none;
+	}
+	main article p {
+		width: 100%;
+	}
+	.inf_1 p {
+		margin-left: 0;
+		float: none;
+	}
+	.inf_2 p {
+		margin-right: 0;
+		float: none;
+	}
+	.inf_3 p {
+		margin-left: 0;
+		float: none;
+	}
+	main:before {
+		display: none;
+	}
+}
+
+@media all and (max-width: 850px) {
+	main article p {
+		width: 100%;
+	}
+	.inf_1 p {
+		margin-left: 0;
+		float: none;
+	}
+	.inf_2 p {
+		margin-right: 0;
+		float: none;
+	}
+	.inf_3 p {
+		margin-left: 0;
+		float: none;
+	}
+	.inf_description {
+		width: 41em;
+		height: 9em;
+		display: inline-block;
+		position: relative;
+		left: 1.5em;
+		top: 0.5em;
+		font-size: 0.9em;
+	}
+}
+
+@media all and (max-width: 780px) {
+	.inf_description {
+		width: 70%;
+		height: 9em;
+		display: inline-block;
+		position: relative;
+		left: 1.5em;
+		top: 0.5em;
+		font-size: 0.8em;
+	}
+}
+
+@media all and (max-width: 679px) {
+	header {
+		background-size: auto 100%;
+	}
+	nav a {
+		margin-left: 1em !important;	
+	}
+	.quests_block article {
+		width: 100%;
+	}
+	.quests_block {
+		max-width: 100%;
+		min-height: 1790px;
+	}
+}
+
+@media all and (max-width: 600px) {
+	.quests_block {
+		max-width: 100%;
+		min-height: 1690px;
+	}
+	.inf_description {
+		width: 100%;
+		height: 9em;
+		display: inline-block;
+		position: relative;
+		left: 1.5em;
+		top: 0.5em;
+		font-size: 0.8em;
+	}
+	main article p .inf_title {
+		display: none;
+	}
+	.inf_2 .inf_description {
+		float: left;
+		left: 0em !important;
+		top: 0.5em;
+	}
+	footer h2 {
+		position: relative;
+		top: 1.5em;
+		font-size: 2em;
+		text-align: center;
+	}
+	footer ul {
+		width: 100%;
+		position: relative;
+		top: 4.5em;
+	}
+	footer iframe {
+		width: 100%;
+		height: 85vh;
+		position: relative;
+		top: 7em;
+		left: 0;
+		margin-bottom: 0;
+		overflow: hidden;
+	}
+}
+
+@media all and (orientation: portrait) {
+	footer iframe {
+		width: 100%;
+		height: 55vh !important;
+		position: relative;
+		top: 7em;
+		left: 0;
+		margin-bottom: 3em;
+		overflow: hidden;
+	}
+}
+
+@media all and (max-width: 530px) {
+	header {
+		background-size: auto 100%;
+		background-position: 90% 0;
+	}
+	header nav {
+		position: relative;
+		left: 0;
+	}
+	nav a {
+		margin-left: 0 !important;	
+	}
+	.logo h2 {
+		left: -30px;
+		top: 65px;
+	}
+	.description {
+		font-size: 1.3rem;
+		width: 100%;
+		position: absolute;
+		bottom: 35px;
+		left: 0;
+		background: none;
+		background-position: left center;
+		background-size: 140px auto;
+		padding-left: 10px;
+	}
+	.quests_block {
+		top: -1em;
+	}
+	.quests_block article {
+		margin-top: -1em !important;
+	}
+	.quests_block {
+		max-width: 100%;
+		min-height: 1390px;
+	}
+	footer ul {
+		width: 100%;
+		position: relative;
+		top: 4em;
+		font-size: 0.9em;
+		margin-bottom: 1em;
+	}
+	footer li {
+		font-size: 2em;
+		margin-top: 0.3em;
+		margin-left: 0.5em;
+		list-style: none;
+		text-align: left;
+	}
+}
+
+@media all and (max-width: 480px) {
+	.quests_block {
+		max-width: 100%;
+		min-height: 1190px;
+	}
+}
+
+@media all and (max-width: 420px) {
+	.quests_block {
+		max-width: 100%;
+		min-height: 1090px;
+	}
+}
+
+@media all and (max-width: 400px) {
+	.quests_block {
+		max-width: 100%;
+		min-height: 1090px;
+	}
+}
+
+@media all and (max-width: 385px) {
+	header nav {
+		position: relative;
+		left: 0;
+	}
+	nav a {
+		margin-bottom: -15px
+	}
+	.key {
+		position: relative;
+		top: -7px;
+	}
+	.logo {
+		background-size: 250px auto;
+		margin: -1em auto 0 auto;
+		padding-left: 0;
+		position: relative;
+		left: 20px;
+	}
+	.logo h2 {
+		left: -60px;
+		top: 65px;
+	}
+	.quests_block {
+		max-width: 100%;
+		min-height: 990px;
+	}
+	.inf_description {
+		width: 100%;
+		height: 9em;
+		display: inline-block;
+		position: relative;
+		left: 1.5em;
+		top: 0.5em;
+		font-size: 0.75em;
+	}
+	.wizard h2 {
+		font-size: 1.5em;
+	}
+	footer li {
+		font-size: 1.7em;
+		margin-top: 0.3em;
+		margin-left: 0.5em;
+		list-style: none;
+		text-align: left;
+	}
+}
+
+@media all and (max-width: 320px) {
+	.quests_block {
+		max-width: 100%;
+		min-height: 790px;
+	}
+}
+
+

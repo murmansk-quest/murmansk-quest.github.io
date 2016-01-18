@@ -1,0 +1,224 @@
+@media all and (min-width: 1000px) {
+	header {
+		background: url(images/bg_header.jpg) no-repeat;
+		background-position: bottom;
+		background-size: 100% auto;
+	}
+}
+
+@media all and (min-width: 0) and (max-width: 1000px) {
+	header {
+		background: url(images/bg_header_min.jpg) no-repeat;
+	}
+}
+
+
+@media all and (max-width: 1308px) {
+	header {
+		background-size: auto 100%;
+	}
+	footer nav a {
+		display: inline-block;
+		margin: 0 2em;
+		color: white;
+		border-bottom: 2px #f34c55 solid;
+		text-decoration: none;
+	}
+}
+
+@media all and (max-width: 1219px) {
+	.table {
+		width: 80%;
+	}
+	.to_top {
+		display: none;
+	}
+}
+
+@media all and (max-width: 1100px) {
+	.table {
+		width: 100%;
+	}
+	.price_4 {
+		left: -83px;
+	}
+}
+
+@media all and (max-width: 1040px) {
+	header {
+		background: url(images/bg_header_min.jpg) no-repeat;
+		background-size: auto 100%;
+	}
+	nav a {
+		margin-left: 3em !important;	
+	}
+	footer nav a {
+		display: inline-block;
+		margin: 10px 0 0 0;
+		color: white;
+		border-bottom: 2px #f34c55 solid;
+		text-decoration: none;
+	}
+}
+
+@media all and (max-width: 679px) {
+	header {
+		background-size: auto 100%;
+	}
+	nav a {
+		margin-left: 1em !important;	
+	}
+}
+
+@media all and (max-width: 530px) {
+	header {
+		background-size: auto 100%;
+		background-position: 90% 0;
+	}
+	header nav {
+		position: relative;
+		left: 0;
+	}
+	nav a {
+		margin-left: 0 !important;	
+	}
+	.present {
+		width: 80px
+	}
+	.logo h2 {
+		left: -30px;
+		top: 65px;
+	}
+	.description {
+		font-size: 1.3rem;
+		width: 100%;
+		position: absolute;
+		bottom: 35px;
+		left: 0;
+		background: none;
+		background-position: left center;
+		background-size: 140px auto;
+		padding-left: 10px;
+	}
+}
+
+@media all and (max-width: 385px) {
+	header nav {
+		position: relative;
+		left: 0;
+	}
+	nav a {
+		margin-bottom: -15px
+	}
+	.key {
+		position: relative;
+		top: -18px;
+	}
+	.logo {
+		background-size: 250px auto;
+		margin: -2.5em auto 0 auto;
+		padding-left: 0;
+		position: relative;
+		left: 20px;
+	}
+	.logo h2 {
+		left: -60px;
+		top: 65px;
+	}
+}
+
+@media all and (max-width: 318px) {
+	.contacts {
+		position: relative;
+		top: -18px;
+	}	
+}
+
+
+/* Table responsive */
+
+@media all and (max-width: 881px) {
+	.table article {
+		width: 110%;
+		display: inline-block;
+		margin-top: 1em;
+		position: relative;
+		left: -50px;
+	}
+}
+
+@media all and (max-width: 804px) {
+	.table article {
+		height: 150px;
+		width: 80%;
+		display: inline-block;
+		margin-top: 1em;
+		position: relative;
+		left: -50px;
+	}
+	.time_block {
+		position: relative;
+		left: 100px;
+		top: -50px;
+	}
+	.price_2 {
+		position: relative;
+		left: 0;
+	}
+	.price_3 {
+		position: absolute;
+		left: 221px;
+	}
+	.price_4 {
+		width: 149px;
+		position: relative;
+		left: 5px;
+	}
+	.day_6, .day_7 {
+		margin-bottom: 30px
+	}
+}
+
+@media all and (max-width: 480px) {
+	.table article {
+		height: 170px;
+	}
+	.time_block {
+		position: relative;
+		left: -30px;
+		top: 0px;
+	}
+	article h3 {
+		width: 100%;
+		text-align: center;
+	}
+}
+
+@media all and (max-width: 480px) {
+	.price_3 {
+		position: absolute;
+		left: 221px;
+		top: 50px;
+	}
+}
+
+@media all and (max-width: 327px) {
+	.time_block {
+		transform: scaleX(0.9);
+	}
+}
+
+@media all and (min-width: 1500px) {
+	.table {
+		width: 60%;
+	}
+}
+
+@media all and (min-width: 1900px) {
+	.table {
+		width: 50%;
+	}
+}
+
+
+/* Table responsive end */
