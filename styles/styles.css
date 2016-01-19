@@ -108,7 +108,6 @@ header nav a:nth-of-type(3) {
 	background: url(images/star.png) no-repeat;
 	background-position: top center;
 	position: relative;
-	right: 4em;
 }
 
 header nav a:nth-of-type(4) {
@@ -124,17 +123,6 @@ header nav a:nth-of-type(5) {
 header nav a:nth-of-type(6) {
 	background: url(images/key.png) no-repeat;
 	background-position: top center;
-}
-
-.rectangle {
-    width: 40px;
-    height: 40px;
-    background: url(images/rectangle.png) no-repeat;
-    background-size: 100% 100%;
-    display: inline-block;
-    position: relative;
-    top: -7px;
-    left: -0.5em;
 }
 
 	/* Navigation end */
@@ -410,21 +398,81 @@ footer li:nth-of-type(4):before {
 
 
 .schedule {
-	width: 100%;
-	height: 20em;
-	background: #D24D57;
+	width: 1200px;
 	margin: 0 auto;
 	position: relative;
 	top: -3em;
+	height: 500px;
 }
 
-.schedule h2 {
+.shedule_title {
 	width: 100%;
 	text-align: center;
 	color: white;
 	font-size: 2em;
 	position: relative;
-	top: 4em;
+	top: -3em;
+}
+
+.shedule_header {
+	width: 1200px;
+	height: 150px;
+	background: url(images/circles.png) no-repeat;
+	background-size: 100%;
+	position: absolute;
+	z-index: 5;
+}
+
+.shedule_header span {
+	width: 115px;
+	height: 115px;
+	border: 1px black solid;
+	display: inline-block;
+	position: relative;
+}
+
+.shedule_header span:nth-of-type(1) {
+	left: 7px;
+	top: 7px;
+}
+
+.shedule_header span:nth-of-type(2) {
+	left: 38px;
+	top: 7px;
+}
+
+.shedule_header span:nth-of-type(3) {
+	left: 70px;
+	top: 7px;
+}
+
+.shedule_header span:nth-of-type(4) {
+	left: 101px;
+	top: 7px;
+}
+
+.shedule_header span:nth-of-type(5) {
+	left: 133px;
+	top: 7px;
+}
+
+.shedule_header span:nth-of-type(6) {
+	left: 164px;
+	top: 7px;
+}
+
+.shedule_header span:nth-of-type(7) {
+	left: 196px;
+	top: 7px;
+}
+
+.shedule_footer {
+	width: 1195px;
+	height: 400px;
+	background: white;
+	position: relative;
+	top: 3em;
+	left: 3px;
 }
 
 	/* Shcedule end */
