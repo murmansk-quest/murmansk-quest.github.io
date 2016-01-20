@@ -5,6 +5,7 @@
 		background-size: 100% auto;
 	}
 }
+
 @media all and (min-width: 0) and (max-width: 1000px) {
 	header {
 		background: url(images/bg_header_min.jpg) no-repeat;
