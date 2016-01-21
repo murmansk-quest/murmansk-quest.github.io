@@ -6,9 +6,13 @@ var price = document.querySelectorAll(".price");
 
 var time = document.querySelectorAll(".price .time");
 
+/*
+
 if(price[1].childNodes.length == 9) {
 	alert("!")
 }
+
+*/
 
 function articleSize(){
 	var article_width = getComputedStyle(articles[0]).width;

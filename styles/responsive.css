@@ -10,12 +10,27 @@
 	header {
 		background: url(images/bg_header_min.jpg) no-repeat;
 	}
+	.quests_block {
+		max-width: 100%;
+		min-height: 990px;
+		margin: 0 auto;
+	}
 }
 
 @media all and (min-width: 1500px) {
 	.quests_block {
 		max-width: 80%;
 		min-height: 900px;
+		margin: 0 auto;
+		position: relative;
+		top: 3em;
+	}
+}
+
+@media all and (min-width: 1590px) {
+	.quests_block {
+		max-width: 80%;
+		min-height: 970px;
 		margin: 0 auto;
 		position: relative;
 		top: 3em;
@@ -32,7 +47,7 @@
 	}
 }
 
-@media all and (min-width: 1750px) {
+@media all and (min-width: 1700px) {
 	.quests_block {
 		max-width: 80%;
 		min-height: 1000px;
@@ -41,11 +56,10 @@
 		top: 3em;
 	}
 }
-
-@media all and (min-width: 1870px) {
+@media all and (min-width: 1800px) {
 	.quests_block {
 		max-width: 80%;
-		min-height: 1050px;
+		min-height: 1100px;
 		margin: 0 auto;
 		position: relative;
 		top: 3em;
@@ -76,6 +90,9 @@
 	.quests_block {
 		max-width: 92%;
 		margin: 0 auto;
+	}
+	.schedule {
+		transform: scale(0.9);
 	}
 }
 
@@ -119,11 +136,6 @@
 		color: white;
 		border-bottom: 2px #f34c55 solid;
 		text-decoration: none;
-	}
-	.quests_block {
-		max-width: 100%;
-		min-height: 1490px;
-		margin: 0 auto;
 	}
 	.left_article {
 		float: none;
@@ -171,6 +183,10 @@
 	}
 	main:before {
 		display: none;
+	}
+	.quests_block {
+		height: 1190px;
+		margin: 0 auto;
 	}
 }
 
@@ -225,14 +241,18 @@
 	}
 	.quests_block {
 		max-width: 100%;
-		min-height: 1790px;
+		min-height: 1590px;
+	}
+	.schedule {
+		position: relative;
+		top: 230px;
 	}
 }
 
 @media all and (max-width: 600px) {
 	.quests_block {
 		max-width: 100%;
-		min-height: 1690px;
+		min-height: 1390px;
 	}
 	.inf_description {
 		width: 100%;
@@ -319,8 +339,7 @@
 		margin-top: -1em !important;
 	}
 	.quests_block {
-		max-width: 100%;
-		min-height: 1390px;
+		height: 1630px;
 	}
 	footer ul {
 		width: 100%;
@@ -336,26 +355,46 @@
 		list-style: none;
 		text-align: left;
 	}
+	.schedule {
+		position: absolute;
+		top: 1600px;
+	}
 }
 
 @media all and (max-width: 480px) {
 	.quests_block {
 		max-width: 100%;
-		min-height: 1190px;
+		height: 1490px;
+	}
+	.schedule {
+		position: absolute;
+		top: 1500px;
 	}
 }
 
 @media all and (max-width: 420px) {
 	.quests_block {
 		max-width: 100%;
-		min-height: 1090px;
+		height: 1090px;
+	}
+	.schedule {
+		position: absolute;
+		top: 1350px;
 	}
 }
 
 @media all and (max-width: 400px) {
 	.quests_block {
-		max-width: 100%;
-		min-height: 1090px;
+		min-height: 1290px;
+	}
+	.schedule {
+		position: absolute;
+		top: 1290px;
+		font-size: 1em;
+	}
+	.schedule_mobile article {
+		width: 100%;
+		height: 50px;
 	}
 }
 
@@ -384,7 +423,7 @@
 	}
 	.quests_block {
 		max-width: 100%;
-		min-height: 990px;
+		min-height: 1220px;
 	}
 	.inf_description {
 		width: 100%;
@@ -405,12 +444,27 @@
 		list-style: none;
 		text-align: left;
 	}
+	.schedule {
+		position: absolute;
+		top: 1210px;
+		font-size: 1em;
+	}
+	.schedule_mobile article {
+		width: 100%;
+		height: 50px;
+		font-size: 0.9em;
+	}
 }
 
 @media all and (max-width: 320px) {
 	.quests_block {
 		max-width: 100%;
 		min-height: 790px;
+	}
+	.schedule {
+		position: absolute;
+		top: 1150px;
+		font-size: 1em;
 	}
 }
 

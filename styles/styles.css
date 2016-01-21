@@ -418,7 +418,7 @@ footer li:nth-of-type(4):before {
 	color: black;
 }
 
-.shedule_title {
+.schedule_title {
 	width: 100%;
 	text-align: center;
 	color: white;
@@ -427,7 +427,7 @@ footer li:nth-of-type(4):before {
 	top: -3em;
 }
 
-.shedule_header {
+.schedule_header {
 	width: 1200px;
 	height: 150px;
 	background: url(images/circles.png) no-repeat;
@@ -436,7 +436,7 @@ footer li:nth-of-type(4):before {
 	z-index: 5;
 }
 
-.shedule_header .circle {
+.schedule_header .circle {
 	width: 115px;
 	height: 115px;
 	border: 1px black solid;
@@ -444,42 +444,42 @@ footer li:nth-of-type(4):before {
 	position: relative;
 }
 
-.shedule_header .circle:nth-of-type(1) {
+.schedule_header .circle:nth-of-type(1) {
 	left: 7px;
 	top: 7px;
 }
 
-.shedule_header .circle:nth-of-type(2) {
+.schedule_header .circle:nth-of-type(2) {
 	left: 38px;
 	top: 7px;
 }
 
-.shedule_header .circle:nth-of-type(3) {
+.schedule_header .circle:nth-of-type(3) {
 	left: 70px;
 	top: 7px;
 }
 
-.shedule_header .circle:nth-of-type(4) {
+.schedule_header .circle:nth-of-type(4) {
 	left: 101px;
 	top: 7px;
 }
 
-.shedule_header .circle:nth-of-type(5) {
+.schedule_header .circle:nth-of-type(5) {
 	left: 133px;
 	top: 7px;
 }
 
-.shedule_header .circle:nth-of-type(6) {
+.schedule_header .circle:nth-of-type(6) {
 	left: 164px;
 	top: 7px;
 }
 
-.shedule_header .circle:nth-of-type(7) {
+.schedule_header .circle:nth-of-type(7) {
 	left: 196px;
 	top: 7px;
 }
 
-.shedule_header .circle:after {
+.schedule_header .circle:after {
 	content: "";
 	width: 75px;
 	height: 1px;
@@ -580,7 +580,7 @@ footer li:nth-of-type(4):before {
 	margin-top: 6px;
 }
 
-.shedule_footer {
+.schedule_footer {
 	width: 1195px;
 	height: 400px;
 	background: white;
@@ -638,6 +638,65 @@ footer li:nth-of-type(4):before {
 
 
 /* Shedule footer end */
+
+
+/* Mobile schedule */
+
+@media all and (min-width: 1000px) {
+	.schedule_mobile {
+		display: none;
+	}
+}
+
+@media all and (max-width: 1000px) {
+	.schedule_title,
+	.schedule_header,
+	.schedule_footer,
+	.schedule_footer *,
+	.schedule_header *,
+	.schedule aside {
+		display: none;
+	}
+	.schedule_mobile {
+		width: 100%;
+		display: block;
+		margin: 0 auto;
+	}
+	.schedule_mobile article {
+		width: 370px;
+		height: 50px;
+		background: #2f2f2f;
+		color: white;
+		text-align: center;
+		display: table;
+		margin: 10px auto 0 auto;
+	}
+	.schedule_mobile article a {
+		width: 100%;
+		height: 100%;
+		text-decoration: none;
+		vertical-align: middle;
+		display: block;
+		display: table-cell;
+	}
+	.link_icon {
+		width: 1.2rem;
+		height: 1.2rem;
+		display: inline-block;
+		background: url(images/Programming-External-Link-icon.png);
+		background-size: 100% 100%;
+		position: relative;
+		top: 0.8rem;
+		left: -0.5rem;
+	}
+	.schedule {
+		position: relative;
+		top: 230px;
+	}
+}
+
+
+/* Mobile schedule end */
 
 
 /* Shcedule end */
