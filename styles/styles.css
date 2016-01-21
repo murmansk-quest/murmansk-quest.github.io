@@ -1,4 +1,4 @@
-	/* Basic */
+/* Basic */
 
 a {
 	outline: none;
@@ -13,11 +13,16 @@ html {
 	height: 2000px;
 }
 
-	/* Basic end */
+* {
+	max-width: 100%;
+}
+
+/* Basic end */
 
 
 
-	/* Header */
+/* Header */
+
 
 header {
 	width: 100%;
@@ -68,11 +73,13 @@ h1 {
 	font-weight: 400;
 }
 
-	/* Header end */
+
+/* Header end */
 
 
 
-	/* Navigation */
+/* Navigation */
+
 
 nav {
 	text-align: center;
@@ -92,7 +99,7 @@ header nav a {
 	font-size: 0.8em;
 }
 
-	/* background-position need in each(!) a */
+/* background-position need in each(!) a */
 
 header nav a:nth-of-type(1) {
 	background: url(images/world.png) no-repeat;
@@ -125,11 +132,13 @@ header nav a:nth-of-type(6) {
 	background-position: top center;
 }
 
-	/* Navigation end */
+
+/* Navigation end */
 
 
 
-	/* Quest block */
+/* Quest block */
+
 
 .quests_block {
 	max-width: 80%;
@@ -187,11 +196,12 @@ header nav a:nth-of-type(6) {
 }
 
 
-	/* Quest block end */
+/* Quest block end */
 
 
 
-	/* Main */
+/* Main */
+
 
 main {
 	width: 100%;
@@ -202,12 +212,12 @@ main {
 
 main:before {
 	content: "";
-	width: 0;
-	height: 0;
-	border-style: solid;
-	border-width: 0 100vw 3em 0;
-	border-color: transparent #c22e36 transparent transparent;
+	width: 100%;
+	height: 50px;
+	background: url(images/red_triangle.png) no-repeat;
+	background-size: 100%;
 	position: absolute;
+	overflow-x: hidden;
 }
 
 main h2 {
@@ -243,13 +253,11 @@ main article p {
 .inf_2 p {
 	margin-right: 5em;
 	float: right;
-
 }
 
 .inf_3 p {
 	margin-left: 5em;
 	float: left;
-
 }
 
 main article p .inf_title {
@@ -282,7 +290,6 @@ main article p .inf_title {
 	position: absolute;
 	text-decoration: underline;
 	font-size: 1.5em;
-
 }
 
 .inf_2 .inf_description span {
@@ -300,11 +307,12 @@ main article p .inf_title {
 	text-align: right;
 }
 
-	/* Main end */
+
+/* Main end */
 
 
 
-	/* Footer */
+/* Footer */
 
 
 footer {
@@ -390,12 +398,16 @@ footer li:nth-of-type(4):before {
 	left: -0.3em;
 }
 
-	/* Footer end */
+/* Footer end */
 
 
 
-	/* Shcedule */
+/* Shcedule */
 
+
+/* Shedule header */ 
+
+						/* !!!!! DON'T DELETE TRANSPARENT BORDERS !!!!! */
 
 .schedule {
 	width: 1200px;
@@ -403,6 +415,7 @@ footer li:nth-of-type(4):before {
 	position: relative;
 	top: -3em;
 	height: 500px;
+	color: black;
 }
 
 .shedule_title {
@@ -523,8 +536,49 @@ footer li:nth-of-type(4):before {
 	top: 20px;
 }
 
+.arrow_right:after {
+	content: "";
+	width: 1px;
+	height: 60px;
+	background: black;
+	position: absolute;
+	left: -10px;
+	top: 5px;
+}
+
+.arrow_left_svg {
+	transform-origin: 0% 0%;
+	transform: translate(35px, 55px) rotateZ(180deg);
+	position: absolute;
+}
+
+.arrow_right_svg {
+	transform: translate(10px, 10px);
+	position: absolute;
+}
+
+/* Shedule header end */ 
 
 
+/* Shedule footer */
+
+.schedule aside {
+	position: absolute;
+	left: 20px;
+	top: 150px;
+	z-index: 5;
+	font-size: 1em;
+}
+
+.schedule aside h3 {
+	font-size: 1.7em;
+	color: #c22e36;
+}
+
+.schedule aside div {
+	margin-left: 3px;
+	margin-top: 6px;
+}
 
 .shedule_footer {
 	width: 1195px;
@@ -535,4 +589,55 @@ footer li:nth-of-type(4):before {
 	left: 3px;
 }
 
-	/* Shcedule end */
+.price_block {
+	width: 1000px;
+	height: 70px;
+	position: absolute;
+	left: 170px;
+	top: 100px;
+}
+
+.time {
+	border-right: 1px red solid;
+	padding-left: 10px;
+}
+
+.price:last-of-type .time:last-of-type {
+	border-right: none;
+}
+
+.time:last-of-type {
+	padding-right: 10px;
+}
+
+.price {
+	font-size: 1.6em;
+	float: left;
+	background: url(images/small_circle.jpg) no-repeat, url(images/small_circle.jpg) no-repeat, url(images/line.png) repeat-x;
+	background-position: -3% 90%, 102.5% 90%, 102.5% 83%;
+}
+
+.price:first-of-type {
+	background: url(images/small_circle.jpg) no-repeat, url(images/small_circle.jpg) no-repeat, url(images/line.png) repeat-x;
+	background-position: 0% 90%, 102.5% 90%, 102.5% 83%;
+}
+
+.price:last-of-type {
+	background: url(images/small_circle.jpg) no-repeat, url(images/line.png) repeat-x;
+	background-position: -3% 90%, 102.5% 83%;
+}
+
+.bottom_price {
+	width: 100%;
+	text-align: center;
+	color: #c22e36;
+	position: relative;
+	top: 25px;
+}
+
+
+
+/* Shedule footer end */
+
+
+/* Shcedule end */
