@@ -142,7 +142,7 @@ header nav a:nth-of-type(6) {
 
 .quests_block {
 	max-width: 80%;
-	min-height: 850px;
+	min-height: 1050px;
 	margin: 0 auto;
 	position: relative;
 	top: 3em;
@@ -413,73 +413,73 @@ footer li:nth-of-type(4):before {
 	width: 1200px;
 	margin: 0 auto;
 	position: relative;
-	top: -3em;
+	top: -10em;
 	height: 500px;
 	color: black;
 }
 
-.shedule_title {
+.schedule_title {
 	width: 100%;
 	text-align: center;
 	color: white;
 	font-size: 2em;
 	position: relative;
-	top: -3em;
+	top: -2em;
 }
 
-.shedule_header {
+.schedule_header {
 	width: 1200px;
-	height: 150px;
+	height: 130px;
 	background: url(images/circles.png) no-repeat;
-	background-size: 100%;
+	background-size: 100% 100%;
 	position: absolute;
 	z-index: 5;
 }
 
-.shedule_header .circle {
-	width: 115px;
+.schedule_header .circle {
+	width: 9.6%;
 	height: 115px;
 	border: 1px black solid;
 	display: inline-block;
 	position: relative;
 }
 
-.shedule_header .circle:nth-of-type(1) {
-	left: 7px;
+.schedule_header .circle:nth-of-type(1) {
+	left: 0.5%;
 	top: 7px;
 }
 
-.shedule_header .circle:nth-of-type(2) {
-	left: 38px;
+.schedule_header .circle:nth-of-type(2) {
+	left: 3.1%;
 	top: 7px;
 }
 
-.shedule_header .circle:nth-of-type(3) {
-	left: 70px;
+.schedule_header .circle:nth-of-type(3) {
+	left: 5.8%;
 	top: 7px;
 }
 
-.shedule_header .circle:nth-of-type(4) {
-	left: 101px;
+.schedule_header .circle:nth-of-type(4) {
+	left: 8.4%;
 	top: 7px;
 }
 
-.shedule_header .circle:nth-of-type(5) {
-	left: 133px;
+.schedule_header .circle:nth-of-type(5) {
+	left: 11.03%;
 	top: 7px;
 }
 
-.shedule_header .circle:nth-of-type(6) {
-	left: 164px;
+.schedule_header .circle:nth-of-type(6) {
+	left: 13.7%;
 	top: 7px;
 }
 
-.shedule_header .circle:nth-of-type(7) {
-	left: 196px;
+.schedule_header .circle:nth-of-type(7) {
+	left: 16.3%;
 	top: 7px;
 }
 
-.shedule_header .circle:after {
+.schedule_header .circle:after {
 	content: "";
 	width: 75px;
 	height: 1px;
@@ -564,11 +564,20 @@ footer li:nth-of-type(4):before {
 
 .schedule aside {
 	position: absolute;
-	left: 20px;
-	top: 150px;
+	left: 50px;
+	top: 205px;
 	z-index: 5;
 	font-size: 1em;
 }
+
+.schedule aside:nth-of-type(2) {
+	top: 340px;
+}
+
+.schedule aside:nth-of-type(3) {
+	top: 475px;
+}
+
 
 .schedule aside h3 {
 	font-size: 1.7em;
@@ -580,21 +589,31 @@ footer li:nth-of-type(4):before {
 	margin-top: 6px;
 }
 
-.shedule_footer {
+.schedule_footer {
 	width: 1195px;
-	height: 400px;
+	height: 530px;
 	background: white;
 	position: relative;
 	top: 3em;
 	left: 3px;
+	z-index: 3;
 }
 
 .price_block {
-	width: 1000px;
+	width: 1200px;
 	height: 70px;
 	position: absolute;
-	left: 170px;
-	top: 100px;
+	left: 280px;
+	top: 122px;
+	font-size: 1.11em;
+}
+
+.price_block_2 {
+	top: 252px;
+}
+
+.price_block_3 {
+	top: 390px;
 }
 
 .time {
@@ -614,17 +633,17 @@ footer li:nth-of-type(4):before {
 	font-size: 1.6em;
 	float: left;
 	background: url(images/small_circle.jpg) no-repeat, url(images/small_circle.jpg) no-repeat, url(images/line.png) repeat-x;
-	background-position: -3% 90%, 102.5% 90%, 102.5% 83%;
+	background-position: -2.2% 90%, 103% 90%, 102.5% 83%;
 }
 
 .price:first-of-type {
 	background: url(images/small_circle.jpg) no-repeat, url(images/small_circle.jpg) no-repeat, url(images/line.png) repeat-x;
-	background-position: 0% 90%, 102.5% 90%, 102.5% 83%;
+	background-position: 0% 90%, 102.2% 90%, 102.5% 83%;
 }
 
 .price:last-of-type {
 	background: url(images/small_circle.jpg) no-repeat, url(images/line.png) repeat-x;
-	background-position: -3% 90%, 102.5% 83%;
+	background-position: -4% 90%, 102.5% 83%;
 }
 
 .bottom_price {
@@ -632,12 +651,19 @@ footer li:nth-of-type(4):before {
 	text-align: center;
 	color: #c22e36;
 	position: relative;
-	top: 25px;
+	top: 24px;
+	font-size: 0.7em;
 }
 
 
 
 /* Shedule footer end */
+
+
+/* Mobile schedule */
+
+
+/* Mobile schedule end */
 
 
 /* Shcedule end */
