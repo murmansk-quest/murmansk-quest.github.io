@@ -27,8 +27,7 @@ html {
 header {
 	width: 100%;
 	color: white;
-	position: relative;
-	background: linear-gradient( to bottom, #261926, #c22e36) !important;
+	background: linear-gradient( to bottom, #261926, #c22e36) !important;\
 }
 
 .logo {
@@ -142,10 +141,7 @@ header nav a:nth-of-type(6) {
 
 .quests_block {
 	max-width: 80%;
-	min-height: 1050px;
 	margin: 0 auto;
-	position: relative;
-	top: 3em;
 }
 
 .top_quest,
@@ -195,6 +191,9 @@ header nav a:nth-of-type(6) {
 	top: 1em;
 }
 
+.schedule {
+	clear: both;
+}
 
 /* Quest block end */
 
@@ -412,10 +411,12 @@ footer li:nth-of-type(4):before {
 .schedule {
 	width: 1200px;
 	margin: 0 auto;
-	position: relative;
-	top: -10em;
 	height: 500px;
 	color: black;
+	position: relative;
+	top: 10em;
+	padding-bottom: 23em;
+	overflow: hidden;
 }
 
 .schedule_title {

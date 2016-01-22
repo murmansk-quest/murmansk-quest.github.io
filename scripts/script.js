@@ -82,3 +82,6 @@ if (document.documentMode || /Edge/.test(navigator.userAgent)) {
    		articles_q[i].style.minHeight = "350px";
    }
 }
+
+
+/* Shedule actions */
