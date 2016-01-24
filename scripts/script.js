@@ -3,13 +3,9 @@
 // Price and time variables
 
 var price = document.querySelectorAll(".price");
-
 var price_first = document.querySelectorAll(".price:first-of-type");
-
 var price_last = document.querySelectorAll(".price:last-of-type");
-
 var time = document.querySelectorAll(".price .time");
-
 var second_price = document.querySelectorAll(".second_price");
 
 // Find circles quantity in price_block, then set background-position
@@ -85,3 +81,104 @@ if (document.documentMode || /Edge/.test(navigator.userAgent)) {
 
 
 /* Shedule actions */
+
+// Schedule variables
+// !!!!! Other schedule variables in schedule.js !!!!!
+
+var arrow_left = document.getElementById("arrow_left");
+var arrow_right = document.getElementById("arrow_right");
+var date_inner = document.querySelectorAll(".date_inner");
+var current_position = 0;
+
+arrow_left.addEventListener("click", goLeft);
+
+function goLeft() {
+	for( i = 0; i < date_inner.length; i++ ) {
+		date_inner[i].style.opacity = "1";
+		date_inner[i].nextElementSibling.style.opacity = "1";
+	}
+	if( parseInt(date_inner[0].innerHTML, 10) == 1 ) {
+		current_position = 0;
+	} else if( parseInt(date_inner[0].innerHTML, 10) == 8 ) {
+		current_position = 1;
+	} else if( parseInt(date_inner[0].innerHTML, 10) == 15 ) {
+		current_position = 2;
+	} else if( parseInt(date_inner[0].innerHTML, 10) == 22 ) {
+		current_position = 3;
+	} else if( parseInt(date_inner[0].innerHTML, 10) == 29 ) {
+		current_position = 4;
+	}
+	if( current_position == 0 ) {
+		for( i = 0; i < date_inner.length; i++ ) {
+			date_inner[i].innerHTML = parseInt(date_inner[i].innerHTML, 10) + 28;
+		}
+	}
+	if( current_position > 0 ) {
+		for( i = 0; i < date_inner.length; i++ ) {
+			date_inner[i].innerHTML = parseInt(date_inner[i].innerHTML, 10) - 7;
+		}
+	}
+	for( i = 0; i < date_inner.length; i++ ) {
+		if( parseInt(date_inner[i].innerHTML, 10) > day_in_month) {
+				date_inner[i].style.opacity = "0";
+				date_inner[i].nextElementSibling.style.opacity = "0";
+		}
+	}
+}
+
+arrow_right.addEventListener("click", goRight);
+
+function goRight() {
+	for( i = 0; i < date_inner.length; i++ ) {
+		date_inner[i].style.opacity = "1";
+		date_inner[i].nextElementSibling.style.opacity = "1";
+		date_inner[i].innerHTML = parseInt(date_inner[i].innerHTML, 10) + 7;
+	}
+	if( parseInt(date_inner[0].innerHTML, 10) == 36) {
+			for( i = 0; i < date_inner.length; i++ ) {
+				date_inner[i].innerHTML = i + 1
+			}
+	}
+	if(current_position == 4) {
+		for( i = 0; i < date_inner.length; i++ ) {
+			date_inner[i].style.opacity = "1"
+			date_inner[i].nextElementSibling.style.opacity = "1"
+		}
+	}
+	current_position++;
+	if( current_position == 6 ) {
+		for( i = 0; i < date_inner.length; i++ ) {
+			date_inner[i].innerHTML = parseInt(date_inner[i].innerHTML, 10) - 28;
+		}
+		current_position = 0;
+	}
+	if( parseInt(date_inner[0].innerHTML, 10) == 1 ) {
+		current_position = 0;
+	} else if( parseInt(date_inner[0].innerHTML, 10) == 8 ) {
+		current_position = 1;
+	} else if( parseInt(date_inner[0].innerHTML, 10) == 15 ) {
+		current_position = 2;
+	} else if( parseInt(date_inner[0].innerHTML, 10) == 22 ) {
+		current_position = 3;
+	} else if( parseInt(date_inner[0].innerHTML, 10) == 29 ) {
+		current_position = 4;
+	}
+	for( i = 0; i < date_inner.length; i++ ) {
+		if( parseInt(date_inner[i].innerHTML, 10) > day_in_month) {
+				date_inner[i].style.opacity = "0";
+				date_inner[i].nextElementSibling.style.opacity = "0";
+		}
+	}
+}
+
+
+// Set month
+
+var current_month = document.querySelectorAll(".month");
+
+for( i = 0; i < current_month.length; i++ ) {
+	current_month[i].innerHTML = set_month;
+}
+
+
+/* Shedule actions end */

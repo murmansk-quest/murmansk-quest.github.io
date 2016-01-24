@@ -414,9 +414,8 @@ footer li:nth-of-type(4):before {
 	height: 500px;
 	color: black;
 	position: relative;
-	top: 10em;
-	padding-bottom: 23em;
-	overflow: hidden;
+	top: 11em;
+	padding-bottom: 23em;	
 }
 
 .schedule_title {
@@ -424,8 +423,9 @@ footer li:nth-of-type(4):before {
 	text-align: center;
 	color: white;
 	font-size: 2em;
-	position: relative;
-	top: -2em;
+	position: absolute;
+	top: -2.5em;
+	z-index: 5;
 }
 
 .schedule_header {
@@ -441,6 +441,7 @@ footer li:nth-of-type(4):before {
 	width: 9.6%;
 	height: 115px;
 	border: 1px black solid;
+	border-radius: 50%;
 	display: inline-block;
 	position: relative;
 }
@@ -490,20 +491,21 @@ footer li:nth-of-type(4):before {
 	top: 55px;
 }
 
-.circle span {
+.circle .date,
+.circle .weekday {
 	color: black;
 	font-size: 1em;
 	width: 100%;
 	text-align: center;
-	display: inline-block;
+	display: block;
 	position: relative;
 }
 
-.circle span:nth-of-type(1) {
+.circle .date {
 	top: 30px;
 }
 
-.circle span:nth-of-type(2) {
+.circle .weekday {
 	top: 45px;
 }
 
@@ -565,18 +567,18 @@ footer li:nth-of-type(4):before {
 
 .schedule aside {
 	position: absolute;
-	left: 50px;
-	top: 205px;
+	left: 60px;
+	top: 170px;
 	z-index: 5;
 	font-size: 1em;
 }
 
 .schedule aside:nth-of-type(2) {
-	top: 340px;
+	top: 300px;
 }
 
 .schedule aside:nth-of-type(3) {
-	top: 475px;
+	top: 440px;
 }
 
 
@@ -661,10 +663,11 @@ footer li:nth-of-type(4):before {
 /* Shedule footer end */
 
 
-/* Mobile schedule */
-
-
-/* Mobile schedule end */
+.arrow_left,
+.arrow_right,
+.circle {
+	cursor: pointer;
+}
 
 
 /* Shcedule end */
