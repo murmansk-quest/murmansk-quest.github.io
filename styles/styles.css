@@ -193,7 +193,6 @@ header nav a:nth-of-type(6) {
 
 .schedule {
 	clear: both;
-	overflow: hidden;
 }
 
 /* Quest block end */
@@ -426,7 +425,6 @@ footer li:nth-of-type(4):before {
 	font-size: 2em;
 	position: absolute;
 	top: -2.5em;
-	z-index: 5;
 }
 
 .schedule_header {
@@ -441,15 +439,20 @@ footer li:nth-of-type(4):before {
 .schedule_header .circle {
 	width: 9.6%;
 	height: 115px;
-	border: 1px black solid;
+	border: 1px transparent solid;
 	border-radius: 50%;
 	display: inline-block;
 	position: relative;
 }
 
+.schedule_header .circle:hover {
+	background: #FF7F7F !important;
+}
+
 .schedule_header .circle:nth-of-type(1) {
 	left: 0.5%;
 	top: 7px;
+	background: #FF7F7F;
 }
 
 .schedule_header .circle:nth-of-type(2) {
@@ -513,7 +516,7 @@ footer li:nth-of-type(4):before {
 .arrow_block {
 	width: 115px;
 	height: 115px;
-	border: 1px black solid;
+	border: 1px transparent solid;
 	position: absolute;
 	display: inline-block;
 	right: 5px;
@@ -523,7 +526,7 @@ footer li:nth-of-type(4):before {
 .arrow_left {
 	width: 45px;
 	height: 70px;
-	border: 1px black solid;
+	border: 1px black transparent;
 	display: inline-block;
 	position: absolute;
 	left: 3px;
@@ -533,7 +536,7 @@ footer li:nth-of-type(4):before {
 .arrow_right {
 	width: 45px;
 	height: 70px;
-	border: 1px black solid;
+	border: 1px transparent solid;
 	display: inline-block;
 	position: absolute;
 	right: 3px;
@@ -625,6 +628,10 @@ footer li:nth-of-type(4):before {
 	padding-left: 10px;
 	position: relative;
 	top: -23px;
+}
+
+.time:hover {
+	background: #c22e36;
 }
 
 .price:last-of-type .time:last-of-type {

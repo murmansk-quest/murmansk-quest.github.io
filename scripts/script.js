@@ -1,13 +1,3 @@
-/* Circles position */
-
-// Price and time variables
-
-// Find circles quantity in price_block, then set background-position
-
-/* Circles position end */
-
-
-
 // Set height of quest_article. Height = width / 1.7
 
 var articles = document.querySelectorAll(".quests_block article");
@@ -40,7 +30,8 @@ if (document.documentMode || /Edge/.test(navigator.userAgent)) {
 /* Shedule actions */
 
 // Schedule variables
-// !!!!! Other schedule variables in schedule.js !!!!!
+// !!!!! Control schedule variables in schedule.js !!!!!
+
 
 var arrow_left = document.getElementById("arrow_left");
 var arrow_right = document.getElementById("arrow_right");
@@ -167,6 +158,8 @@ setPrice()
 // Set time
 
 
+// Set time of firs quest
+
 function questOne_firstSchedule() {
 
 	document.querySelectorAll("#quest_1")[0].innerHTML = "<section class=\"price price first_price\"><div class=\"bottom_price price_one\"></div></section><section class=\"price second_price\"><div class=\"bottom_price price_two\"></div></section>";
@@ -187,8 +180,6 @@ function questOne_firstSchedule() {
 
 	questOne_firstSchedule();
 }
-
-questOne_firstSchedule()
 
 function questOne_secondSchedule() {
 
@@ -212,7 +203,7 @@ function questOne_secondSchedule() {
 		document.querySelectorAll("#quest_1 .third_price")[0].innerHTML = "<div class=\"bottom_price price_tree\"></div> <span class=\"time\">" + first_set_time[6] + "</span><span class=\"time\">" + first_set_time[7] + "</span> <span class=\"time\">" + first_set_time[8] + "</span>";
 	}
 
-	 questOne_thirdSchedule()
+	questOne_thirdSchedule()
 
 
 	setPrice()
@@ -237,9 +228,13 @@ function questOne_thirdSchedule() {
 	}
 
 	questOne_firstSchedule();
-
 }
 
+questOne_firstSchedule();
+
+
+
+// Set time of second quest
 
 function questTwo_firstSchedule() {
 
@@ -284,15 +279,194 @@ function questTwo_secondSchedule() {
 		document.querySelectorAll("#quest_2 .third_price")[0].innerHTML = "<div class=\"bottom_price price_tree\"></div> <span class=\"time\">" + first_set_time[6] + "</span><span class=\"time\">" + first_set_time[7] + "</span> <span class=\"time\">" + first_set_time[8] + "</span>";
 	}
 
-	 questOne_thirdSchedule()
+	questOne_thirdSchedule()
 
 
 	setPrice()
 }
 
-questTwo_secondSchedule() 
+function questTwo_thirdSchedule() {
+
+	document.querySelectorAll("#quest_2")[0].innerHTML = "<section class=\"price price first_price\"><div class=\"bottom_price price_one\"></div></section><section class=\"price second_price\"><div class=\"bottom_price price_two\"></div></section>";
 
 
+	function questOne_firstSchedule() {
+	document.querySelectorAll("#quest_2 .first_price")[0].innerHTML = "<div class=\"bottom_price price_one\"></div> <span class=\"time\">" + first_set_time[0] + "</span><span class=\"time\">" + first_set_time[1] + "</span>";
+	setPrice()
+	}
+
+	questOne_secondSchedule();
+
+
+	function questOne_secondSchedule() {
+		document.querySelectorAll("#quest_2 .second_price")[0].innerHTML = "<div class=\"bottom_price price_tree\"></div> <span class=\"time\">" + first_set_time[2] + "</span><span class=\"time\">" + first_set_time[3] + "</span><span class=\"time\">" + first_set_time[4] +  "</span><span class=\"time\">" + first_set_time[5] +  "</span><span class=\"time\">" + first_set_time[6] +  "</span><span class=\"time\">" + first_set_time[7] +  "</span><span class=\"time\">" + first_set_time[8] +  "</span>";
+		setPrice()
+	}
+
+	questOne_firstSchedule();
+
+
+	setPrice()
+}
+
+questTwo_firstSchedule();
+
+
+
+// Set time of firs quest
+
+function questTree_firstSchedule() {
+
+	document.querySelectorAll("#quest_3")[0].innerHTML = "<section class=\"price price first_price\"><div class=\"bottom_price price_one\"></div></section><section class=\"price second_price\"><div class=\"bottom_price price_two\"></div></section>";
+
+
+	function questOne_firstSchedule() {
+	document.querySelectorAll("#quest_3 .first_price")[0].innerHTML = "<div class=\"bottom_price price_one\"></div> <span class=\"time\">" + second_set_time[0] + "</span> <span class=\"time\">" + second_set_time[1] + "</span> <span class=\"time\">" + second_set_time[2] + "</span><span class=\"time\">" + second_set_time[3] + "</span><span class=\"time\">" + second_set_time[4] +  "</span>";
+	setPrice()
+	}
+
+	questOne_secondSchedule();
+
+
+	function questOne_secondSchedule() {
+		document.querySelectorAll("#quest_3 .second_price")[0].innerHTML = "<div class=\"bottom_price price_tree\"></div> <span class=\"time\">" + second_set_time[5] +  "</span><span class=\"time\">" + second_set_time[6] +  "</span><span class=\"time\">" + second_set_time[7] +  "</span><span class=\"time\">" + second_set_time[8] +  "</span>";
+		setPrice()
+	}
+
+	questOne_firstSchedule();
+}
+
+function questTree_secondSchedule() {
+
+	document.querySelectorAll("#quest_3")[0].innerHTML = "<section class=\"price price first_price\"><div class=\"bottom_price price_one\"></div></section><section class=\"price second_price\"><div class=\"bottom_price price_two\"></div></section><section class=\"price third_price\"><div class=\"bottom_price price_tree\"></div></section>";									
+
+
+	function questOne_secondSchedule() {
+	document.querySelectorAll("#quest_3 .first_price")[0].innerHTML = "<div class=\"bottom_price price_one\"></div> <span class=\"time\">" + second_set_time[0] + "</span> <span class=\"time\">" + second_set_time[1] + "</span><span class=\"time\">" + second_set_time[2] + "</span>" + "<span class=\"time\">" + second_set_time[3] + "</span>";                                                
+	}
+
+	questOne_secondSchedule();
+
+
+	function questOne_firstSchedule() {
+		document.querySelectorAll("#quest_3 .second_price")[0].innerHTML = "<div class=\"bottom_price price_two\"></div> <span class=\"time\">" + second_set_time[4] + "</span><span class=\"time\">" + second_set_time[5] + "</span>";
+	}
+
+	questOne_firstSchedule();
+
+	function questOne_thirdSchedule() {
+		document.querySelectorAll("#quest_3 .third_price")[0].innerHTML = "<div class=\"bottom_price price_tree\"></div> <span class=\"time\">" + second_set_time[6] + "</span><span class=\"time\">" + second_set_time[7] + "</span> <span class=\"time\">" + second_set_time[8] + "</span>";
+	}
+
+	questOne_thirdSchedule()
+
+
+	setPrice()
+}
+
+function questTree_thirdSchedule() {
+
+	document.querySelectorAll("#quest_3")[0].innerHTML = "<section class=\"price price first_price\"><div class=\"bottom_price price_one\"></div></section><section class=\"price second_price\"><div class=\"bottom_price price_two\"></div></section>";
+
+
+	function questOne_firstSchedule() {
+	document.querySelectorAll("#quest_3 .first_price")[0].innerHTML = "<div class=\"bottom_price price_one\"></div> <span class=\"time\">" + second_set_time[0] + "</span><span class=\"time\">" + second_set_time[1] + "</span>";
+	setPrice()
+	}
+
+	questOne_secondSchedule();
+
+
+	function questOne_secondSchedule() {
+		document.querySelectorAll("#quest_3 .second_price")[0].innerHTML = "<div class=\"bottom_price price_tree\"></div> <span class=\"time\">" + second_set_time[2] + "</span><span class=\"time\">" + second_set_time[3] + "</span><span class=\"time\">" + second_set_time[4] +  "</span><span class=\"time\">" + second_set_time[5] +  "</span><span class=\"time\">" + second_set_time[6] +  "</span><span class=\"time\">" + second_set_time[7] +  "</span><span class=\"time\">" + second_set_time[8] +  "</span>";
+		setPrice()
+	}
+
+	questOne_firstSchedule();
+
+
+	setPrice()
+}
+
+questTree_firstSchedule();
+
+
+
+// Circle actions
+
+var schedule_one_circle = document.getElementsByClassName("schedule_one");
+var schedule_two_circle = document.getElementsByClassName("schedule_two");
+var schedule_tree_circle = document.getElementsByClassName("schedule_tree");
+
+for( i = 0; i < schedule_one_circle.length; i++ ) {
+	schedule_one_circle[i].addEventListener("click", scheduleOne)
+}
+
+function scheduleOne() {
+	questOne_firstSchedule();
+	questTwo_firstSchedule();
+	questTree_firstSchedule();
+	for( i = 0; i < time.length; i++ ) {
+		time[i].addEventListener("click", pickTime)
+	}
+}
+
+for( i = 0; i < schedule_two_circle.length; i++ ) {
+	schedule_two_circle[i].addEventListener("click", scheduleTwo)
+}
+
+function scheduleTwo() {
+	questOne_secondSchedule();
+	questTwo_secondSchedule();
+	questTree_secondSchedule();
+	for( i = 0; i < time.length; i++ ) {
+		time[i].addEventListener("click", pickTime)
+	}
+}
+
+for( i = 0; i < schedule_tree_circle.length; i++ ) {
+	schedule_tree_circle[i].addEventListener("click", scheduleTree)
+}
+
+function scheduleTree() {
+	questOne_thirdSchedule();
+	questTwo_thirdSchedule();
+	questTree_thirdSchedule();
+	for( i = 0; i < time.length; i++ ) {
+		time[i].addEventListener("click", pickTime)
+	}
+}
+
+
+// Pick circle
+
+var circle = document.getElementsByClassName("circle");
+
+for( i = 0; i < circle.length; i++ ) {
+	circle[i].addEventListener("click", pickCircle)
+}
+
+function pickCircle() {
+	for( i = 0; i < circle.length; i++ ) {
+		circle[i].style.background = "transparent";
+	}
+	this.style.background = "#FF7F7F";
+}
+
+// Pick time
+
+var time = document.getElementsByClassName("time");
+
+for( i = 0; i < time.length; i++ ) {
+	time[i].addEventListener("click", pickTime)
+}
+
+function pickTime() {
+	for( i = 0; i < time.length; i++ ) {
+		time[i].style.background = "transparent";
+	}
+	this.style.background = "#c22e36";
+}
 
 
 /* Shedule actions end */
