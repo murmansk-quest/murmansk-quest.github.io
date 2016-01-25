@@ -2,51 +2,7 @@
 
 // Price and time variables
 
-var price = document.querySelectorAll(".price");
-var price_first = document.querySelectorAll(".price:first-of-type");
-var price_last = document.querySelectorAll(".price:last-of-type");
-var time = document.querySelectorAll(".price .time");
-var second_price = document.querySelectorAll(".second_price");
-
 // Find circles quantity in price_block, then set background-position
-
-for(i = 0; i < price_first.length; i++ ) {
-
-	if(price_first[i].childNodes.length == 13) {
-		price_first[i].style.backgroundPosition = "0% 90%, 102% 90%, 102.5% 83%";
-	} else if (price_first[i].childNodes.length == 9) {
-		price_first[i].style.backgroundPosition = "0% 90%, 103.5% 90%, 102.5% 83%";
-	} else if (price_first[i].childNodes.length == 7) {
-		price_first[i].style.backgroundPosition = "0% 90%, 105% 90%, 102.5% 83%";
-	}
-
-}
-
-for( i = 0; i < second_price.length; i++ ) {
-
-	if(second_price[i].childNodes.length == 7) {
-		second_price[i].style.backgroundPosition = "-3.9% 90%, 104% 90%, 102.5% 83%";
-	} else if(second_price[i].childNodes.length == 11) {
-		second_price[i].style.backgroundPosition = "-2.3% 90%, 101.9% 90%, 102.5% 83%";
-	}
-
-}
-
-for(i = 0; i < price_last.length; i++ ) {
-
-	if(price_last[i].childNodes.length == 9) {
-		price_last[i].style.backgroundPosition = "-3% 90%, 102.5% 83%";
-	} else if(price_last[i].childNodes.length == 11) {
-		price_last[i].style.backgroundPosition = "-2% 90%, 102.5% 83%";
-	} else if(price_last[i].childNodes.length == 13) {
-		price_last[i].style.backgroundPosition = "-2% 90%, 102.5% 83%";
-	} else if(price_last[i].childNodes.length == 15) {
-		price_last[i].style.backgroundPosition = "-1.8% 90%, 102.5% 83%";
-	} else if(price_last[i].childNodes.length == 17) {
-		price_last[i].style.backgroundPosition = "-1.2% 90%, 102.5% 83%";
-	}
-
-}
 
 /* Circles position end */
 
@@ -74,10 +30,11 @@ window.addEventListener("resize", articleSize);
 
 if (document.documentMode || /Edge/.test(navigator.userAgent)) {
    var articles_q = document.querySelectorAll(".quests_block article");
-   for( i = 0; articles_q.length; i++) {
+   for( i = 0; i < articles_q.length; i++) {
    		articles_q[i].style.minHeight = "350px";
    }
 }
+
 
 
 /* Shedule actions */
@@ -119,7 +76,7 @@ function goLeft() {
 		}
 	}
 	for( i = 0; i < date_inner.length; i++ ) {
-		if( parseInt(date_inner[i].innerHTML, 10) > day_in_month) {
+		if( parseInt(date_inner[i].innerHTML, 10) > set_day_in_month) {
 				date_inner[i].style.opacity = "0";
 				date_inner[i].nextElementSibling.style.opacity = "0";
 		}
@@ -164,12 +121,13 @@ function goRight() {
 		current_position = 4;
 	}
 	for( i = 0; i < date_inner.length; i++ ) {
-		if( parseInt(date_inner[i].innerHTML, 10) > day_in_month) {
+		if( parseInt(date_inner[i].innerHTML, 10) > set_day_in_month) {
 				date_inner[i].style.opacity = "0";
 				date_inner[i].nextElementSibling.style.opacity = "0";
 		}
 	}
 }
+
 
 
 // Set month
@@ -181,4 +139,162 @@ for( i = 0; i < current_month.length; i++ ) {
 }
 
 
+
+// Set prices
+
+function setPrice() {
+	var price_one = document.querySelectorAll(".price_one");
+	var price_two = document.querySelectorAll(".price_two");
+	var price_tree = document.querySelectorAll(".price_tree");
+
+	for( i = 0; i < price_one.length; i++ ) {
+		price_one[i].innerHTML = set_first_price;
+	}
+
+	for( i = 0; i < price_two.length; i++ ) {
+		price_two[i].innerHTML = set_second_price;
+	}
+
+	for( i = 0; i < price_tree.length; i++ ) {
+		price_tree[i].innerHTML = set_third_price;
+	}
+}
+
+setPrice()
+
+
+
+// Set time
+
+
+function questOne_firstSchedule() {
+
+	document.querySelectorAll("#quest_1")[0].innerHTML = "<section class=\"price price first_price\"><div class=\"bottom_price price_one\"></div></section><section class=\"price second_price\"><div class=\"bottom_price price_two\"></div></section>";
+
+
+	function questOne_firstSchedule() {
+	document.querySelectorAll("#quest_1 .first_price")[0].innerHTML = "<div class=\"bottom_price price_one\"></div> <span class=\"time\">" + first_set_time[1] + "</span> <span class=\"time\">" + first_set_time[2] + "</span><span class=\"time\">" + first_set_time[3] + "</span><span class=\"time\">" + first_set_time[4] +  "</span>";
+	setPrice()
+	}
+
+	questOne_secondSchedule();
+
+
+	function questOne_secondSchedule() {
+		document.querySelectorAll("#quest_1 .second_price")[0].innerHTML = "<div class=\"bottom_price price_tree\"></div> <span class=\"time\">" + first_set_time[5] +  "</span><span class=\"time\">" + first_set_time[6] +  "</span><span class=\"time\">" + first_set_time[7] +  "</span><span class=\"time\">" + first_set_time[8] +  "</span>";
+		setPrice()
+	}
+
+	questOne_firstSchedule();
+}
+
+questOne_firstSchedule()
+
+function questOne_secondSchedule() {
+
+	document.querySelectorAll("#quest_1")[0].innerHTML = "<section class=\"price price first_price\"><div class=\"bottom_price price_one\"></div></section><section class=\"price second_price\"><div class=\"bottom_price price_two\"></div></section><section class=\"price third_price\"><div class=\"bottom_price price_tree\"></div></section>";									
+
+
+	function questOne_secondSchedule() {
+	document.querySelectorAll("#quest_1 .first_price")[0].innerHTML = "<div class=\"bottom_price price_one\"></div> <span class=\"time\">" + first_set_time[1] + "</span><span class=\"time\">" + first_set_time[2] + "</span>" + "<span class=\"time\">" + first_set_time[3] + "</span>";                                                
+	}
+
+	questOne_secondSchedule();
+
+
+	function questOne_firstSchedule() {
+		document.querySelectorAll("#quest_1 .second_price")[0].innerHTML = "<div class=\"bottom_price price_two\"></div> <span class=\"time\">" + first_set_time[4] + "</span><span class=\"time\">" + first_set_time[5] + "</span>";
+	}
+
+	questOne_firstSchedule();
+
+	function questOne_thirdSchedule() {
+		document.querySelectorAll("#quest_1 .third_price")[0].innerHTML = "<div class=\"bottom_price price_tree\"></div> <span class=\"time\">" + first_set_time[6] + "</span><span class=\"time\">" + first_set_time[7] + "</span> <span class=\"time\">" + first_set_time[8] + "</span>";
+	}
+
+	 questOne_thirdSchedule()
+
+
+	setPrice()
+}
+
+function questOne_thirdSchedule() {
+
+	document.querySelectorAll("#quest_1")[0].innerHTML = "<section class=\"price price first_price\"><div class=\"bottom_price price_one\"></div></section><section class=\"price second_price\"><div class=\"bottom_price price_two\"></div></section>";
+
+
+	function questOne_firstSchedule() {
+	document.querySelectorAll("#quest_1 .first_price")[0].innerHTML = "<div class=\"bottom_price price_one\"></div> <span class=\"time\">" + first_set_time[0] + "</span><span class=\"time\">" + first_set_time[1] + "</span>";
+	setPrice()
+	}
+
+	questOne_secondSchedule();
+
+
+	function questOne_secondSchedule() {
+		document.querySelectorAll("#quest_1 .second_price")[0].innerHTML = "<div class=\"bottom_price price_tree\"></div> <span class=\"time\">" + first_set_time[2] + "</span><span class=\"time\">" + first_set_time[3] + "</span><span class=\"time\">" + first_set_time[4] +  "</span><span class=\"time\">" + first_set_time[5] +  "</span><span class=\"time\">" + first_set_time[6] +  "</span><span class=\"time\">" + first_set_time[7] +  "</span><span class=\"time\">" + first_set_time[8] +  "</span>";
+		setPrice()
+	}
+
+	questOne_firstSchedule();
+
+}
+
+
+function questTwo_firstSchedule() {
+
+	document.querySelectorAll("#quest_2")[0].innerHTML = "<section class=\"price price first_price\"><div class=\"bottom_price price_one\"></div></section><section class=\"price second_price\"><div class=\"bottom_price price_two\"></div></section>";
+
+
+	function questOne_firstSchedule() {
+	document.querySelectorAll("#quest_2 .first_price")[0].innerHTML = "<div class=\"bottom_price price_one\"></div> <span class=\"time\">" + first_set_time[0] + "</span> <span class=\"time\">" + first_set_time[1] + "</span> <span class=\"time\">" + first_set_time[2] + "</span><span class=\"time\">" + first_set_time[3] + "</span><span class=\"time\">" + first_set_time[4] +  "</span>";
+	setPrice()
+	}
+
+	questOne_secondSchedule();
+
+
+	function questOne_secondSchedule() {
+		document.querySelectorAll("#quest_2 .second_price")[0].innerHTML = "<div class=\"bottom_price price_tree\"></div> <span class=\"time\">" + first_set_time[5] +  "</span><span class=\"time\">" + first_set_time[6] +  "</span><span class=\"time\">" + first_set_time[7] +  "</span><span class=\"time\">" + first_set_time[8] +  "</span>";
+		setPrice()
+	}
+
+	questOne_firstSchedule();
+}
+
+function questTwo_secondSchedule() {
+
+	document.querySelectorAll("#quest_2")[0].innerHTML = "<section class=\"price price first_price\"><div class=\"bottom_price price_one\"></div></section><section class=\"price second_price\"><div class=\"bottom_price price_two\"></div></section><section class=\"price third_price\"><div class=\"bottom_price price_tree\"></div></section>";									
+
+
+	function questOne_firstSchedule() {
+		document.querySelectorAll("#quest_2 .second_price")[0].innerHTML = "<div class=\"bottom_price price_two\"></div> <span class=\"time\">" + first_set_time[4] + "</span><span class=\"time\">" + first_set_time[5] + "</span>";
+	}
+
+	questOne_firstSchedule();
+
+
+	function questOne_secondSchedule() {
+	document.querySelectorAll("#quest_2 .first_price")[0].innerHTML = "<div class=\"bottom_price price_one\"></div> <span class=\"time\">" + first_set_time[0] + "</span><span class=\"time\">" + first_set_time[1] + "</span>" + "<span class=\"time\">" + first_set_time[2] + "</span>"+ "<span class=\"time\">" + first_set_time[3] + "</span>";                                                
+	}
+
+	questOne_secondSchedule();
+
+	function questOne_thirdSchedule() {
+		document.querySelectorAll("#quest_2 .third_price")[0].innerHTML = "<div class=\"bottom_price price_tree\"></div> <span class=\"time\">" + first_set_time[6] + "</span><span class=\"time\">" + first_set_time[7] + "</span> <span class=\"time\">" + first_set_time[8] + "</span>";
+	}
+
+	 questOne_thirdSchedule()
+
+
+	setPrice()
+}
+
+questTwo_secondSchedule() 
+
+
+
+
 /* Shedule actions end */
+
+

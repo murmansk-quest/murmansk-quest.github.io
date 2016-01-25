@@ -193,6 +193,7 @@ header nav a:nth-of-type(6) {
 
 .schedule {
 	clear: both;
+	overflow: hidden;
 }
 
 /* Quest block end */
@@ -622,6 +623,8 @@ footer li:nth-of-type(4):before {
 .time {
 	border-right: 1px red solid;
 	padding-left: 10px;
+	position: relative;
+	top: -23px;
 }
 
 .price:last-of-type .time:last-of-type {
@@ -635,18 +638,30 @@ footer li:nth-of-type(4):before {
 .price {
 	font-size: 1.6em;
 	float: left;
-	background: url(images/small_circle.jpg) no-repeat, url(images/small_circle.jpg) no-repeat, url(images/line.png) repeat-x;
-	background-position: -2.2% 90%, 103% 90%, 102.5% 83%;
+	background: url(images/line.png) repeat-x;
+	background-position: 102.5% 83%;
+	position: relative;
 }
 
 .price:first-of-type {
-	background: url(images/small_circle.jpg) no-repeat, url(images/small_circle.jpg) no-repeat, url(images/line.png) repeat-x;
-	background-position: 0% 90%, 102.2% 90%, 102.5% 83%;
+	background: url(images/line.png) repeat-x;
+	background-position: 102.5% 83%;
+}
+
+.price .time:first-of-type:before {
+	content: "";
+	width: 15px;
+	height: 15px;
+	background: url(images/small_circle.jpg) no-repeat;
+	background-size: 100%;
+	position: absolute;
+	left: -7px;
+	top: 37px;
 }
 
 .price:last-of-type {
-	background: url(images/small_circle.jpg) no-repeat, url(images/line.png) repeat-x;
-	background-position: -4% 90%, 102.5% 83%;
+	background: url(images/line.png) repeat-x;
+	background-position: 102.5% 83%;
 }
 
 .bottom_price {
@@ -654,18 +669,20 @@ footer li:nth-of-type(4):before {
 	text-align: center;
 	color: #c22e36;
 	position: relative;
-	top: 24px;
+	top: 57px;
 	font-size: 0.7em;
 }
-
 
 
 /* Shedule footer end */
 
 
+/* Cursor pointer */
+
 .arrow_left,
 .arrow_right,
-.circle {
+.circle,
+.time {
 	cursor: pointer;
 }
 

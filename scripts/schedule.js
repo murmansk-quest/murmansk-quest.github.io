@@ -1,28 +1,18 @@
-var set_month = "october";
+var set_month = "october";	  			// Установить месяц
 
-var day_in_month = "31";
+var set_day_in_month = "31";   			// Усатановить кол-во дней в месяце
 
-var first_price = "2000rub";
+var set_first_price = "2000rub";   		// Установить первую цену
 
-var second_price = "2500rub";
+var set_second_price = "2500rub";  		// Установить вторую цену
 
-var third_price = "3000rub";
-
-var price_one = document.querySelectorAll(".price_one");
-var price_two = document.querySelectorAll(".price_two");
-var price_tree = document.querySelectorAll(".price_tree");
-
-for( i = 0; i < price_one.length; i++ ) {
-	price_one[i].innerHTML = first_price;
-}
-
-for( i = 0; i < price_two.length; i++ ) {
-	price_two[i].innerHTML = second_price;
-}
-
-for( i = 0; i < price_tree.length; i++ ) {
-	price_tree[i].innerHTML = third_price;
-}
+var set_third_price = "3000rub";   		// Установить третью цену
 
 
+
+
+									/*  Утановить/изменить время  */
+
+
+var first_set_time = [  "10:00 ",  "11:30 ",  "13:00 ",  "14:30 ",  "16:00 ",  "17:30 ",  "19:00 ",  "20:30 ",  "22:00 " ];
 
