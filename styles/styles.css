@@ -17,6 +17,10 @@ html {
 	max-width: 100%;
 }
 
+body {
+	overflow: hidden;
+}
+
 /* Basic end */
 
 
