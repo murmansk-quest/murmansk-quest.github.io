@@ -72,6 +72,9 @@ function goLeft() {
 				date_inner[i].nextElementSibling.style.opacity = "0";
 		}
 	}
+	for( i = 0; i < circle.length; i++ ) {
+		circle[i].style.background = "transparent";
+	}
 }
 
 arrow_right.addEventListener("click", goRight);
@@ -116,6 +119,9 @@ function goRight() {
 				date_inner[i].style.opacity = "0";
 				date_inner[i].nextElementSibling.style.opacity = "0";
 		}
+	}
+	for( i = 0; i < circle.length; i++ ) {
+		circle[i].style.background = "transparent";
 	}
 }
 
@@ -446,16 +452,31 @@ for( i = 0; i < circle.length; i++ ) {
 	circle[i].addEventListener("click", pickCircle)
 }
 
-function pickCircle() {
+function pickCircle(event) {
 	for( i = 0; i < circle.length; i++ ) {
 		circle[i].style.background = "transparent";
 	}
 	this.style.background = "#FF7F7F";
+	target = event.target;
+	if( target.parentNode.classList.contains("circle") ) {
+		time_inner_target = event.target.parentNode
+	}
+	if( target.parentNode.parentNode.classList.contains("circle") ) {
+		time_inner_target = event.target.parentNode.parentNode
+	}
+	if( target.classList.contains("circle") ) {
+		time_inner_target = event.target
+	}
 }
 
-// Pick time
+
+
+// Pick time and modal window
 
 var time = document.getElementsByClassName("time");
+var modal_block = document.getElementById("modal_block");
+var modal_window = document.getElementById("modal_window");
+var modal_count = 0;
 
 for( i = 0; i < time.length; i++ ) {
 	time[i].addEventListener("click", pickTime)
@@ -466,9 +487,109 @@ function pickTime() {
 		time[i].style.background = "transparent";
 	}
 	this.style.background = "#c22e36";
+	modal_block.style.display = "block";
+	setTimeout(function() {
+		modal_count = 1;
+	}, 300)
 }
+
+
+// Set quest names
+
+var quest_name_one = document.getElementById("quest_name_one");
+var quest_name_two = document.getElementById("quest_name_two");
+var quest_name_tree = document.getElementById("quest_name_tree");
+
+quest_name_one.innerHTML = quest_one;
+
+quest_name_two.innerHTML = quest_two;
+
+quest_name_tree.innerHTML = quest_tree;
+
 
 
 /* Shedule actions end */
 
 
+/* Modal window */
+
+window.addEventListener("click", closeModal);
+
+function closeModal(event) {
+	target = event.target
+	if( !target.classList.contains("modal") && modal_count == 1 ) {
+		modal_block.style.display = "none";
+		modal_count = 0;
+	}
+}
+
+
+// Clear input
+
+function doClear(theText) {
+	if(theText.value == theText.defaultValue) {
+		theText.value = "";
+	} 
+}
+
+function doDefault(theText) { 
+	if(theText.value == "") { 
+		theText.value = theText.defaultValue 
+	} 
+}
+
+
+
+// Get date, time, quest_name in modal window
+
+
+// Get date
+
+for( i = 0; i < circle.length; i++ ) {
+	circle[i].addEventListener("click", getDate)
+}
+
+
+var selected_date = "1";
+var date_in_modal = document.getElementById("selected_date");
+date_in_modal.innerHTML = selected_date;
+
+
+function getDate(event){
+	target = event.target;
+	selected_date = time_inner_target.querySelectorAll(".date_inner")[0].innerHTML;
+	date_in_modal.innerHTML = selected_date;
+	for( i = 0; i < time.length; i++ ) {
+		time[i].addEventListener("click", getTime)
+	}
+}
+
+
+// Get time
+
+
+var selected_time = "10:00";
+var time_in_modal = document.getElementById("selected_time");
+var quest_name_modal = document.getElementById("quest_name_modal");
+time_in_modal.innerHTML = selected_time;
+
+for( i = 0; i < time.length; i++ ) {
+	time[i].addEventListener("click", getTime)
+}
+
+function getTime(event) {
+	target = event.target;
+	time_in_modal.innerHTML = target.innerHTML;
+	if( target.parentNode.parentNode.classList.contains("price_block_1") ) {
+		quest_name_modal.innerHTML = quest_one;
+	}
+	if( target.parentNode.parentNode.classList.contains("price_block_2") ) {
+		quest_name_modal.innerHTML = quest_two;
+	}
+	if( target.parentNode.parentNode.classList.contains("price_block_3") ) {
+		quest_name_modal.innerHTML = quest_tree;
+	}
+}
+
+
+/* Modal window end */

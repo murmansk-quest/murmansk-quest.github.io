@@ -199,7 +199,7 @@
 
 		<aside>
 
-			<h3> Quest name </h3>
+			<h3 id="quest_name_one"> Quest name </h3>
 
 			<div> 2 - 4 players </div>
 
@@ -210,7 +210,7 @@
 
 		<aside>
 
-			<h3> Quest name </h3>
+			<h3 id="quest_name_two"> Quest name </h3>
 
 			<div> 2 - 4 players </div>
 
@@ -221,7 +221,7 @@
 
 		<aside>
 
-			<h3> Quest name </h3>
+			<h3 id="quest_name_tree"> Quest name </h3>
 
 			<div> 2 - 4 players </div>
 
@@ -233,7 +233,7 @@
 		<section class="schedule_footer">
 
 
-			<section class="price_block" id="quest_1">
+			<section class="price_block price_block_1" id="quest_1">
 
 				<!-- Generate with SET TIME block in script.js -->
 
@@ -361,6 +361,37 @@
 	<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d11461.821008002647!2d33.081283!3d68.955314!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x44340fc4d480426b%3A0xf5d7287c38f98a63!2z0L_RgC4g0JvQtdC90LjQvdCwLCAyNiwg0JzRg9GA0LzQsNC90YHQuiwg0JzRg9GA0LzQsNC90YHQutCw0Y8g0L7QsdC7Liwg0KDQvtGB0YHQuNGPLCAxODMwMTA!5e0!3m2!1sru!2s!4v1453033954215" width="800" height="600" frameborder="0" style="border:0" allowfullscreen></iframe>
 
 </footer>
+
+
+<section class="modal_block" id="modal_block">
+
+	<article class="modal_window modal" id="modal_window">
+
+		<section class="date_block modal">
+			
+			<span class="date_number modal" id="selected_date">  </span>
+			<span class="date_month modal"> October </span>
+			<span class="date_time modal" id="selected_time">  </span>
+
+		</section>
+
+		<span class="quest_name modal" id="quest_name_modal"> Quest_name </span>
+
+		<section class="input_block modal">
+
+			<input class="modal" name="" value="Ваше имя" onFocus="doClear(this)" onBlur="doDefault(this)">
+
+			<input class="modal" name="" value="Адрес эл.почты" onFocus="doClear(this)" onBlur="doDefault(this)">
+
+			<input class="modal" name="" value="Ваш телефон" onFocus="doClear(this)" onBlur="doDefault(this)">
+
+		</section>
+
+		<button type="button" class="book_this modal"> Забронировать </button>
+		
+	</article>
+	
+</section>
 
 <script src="scripts/schedule.js"></script>
 <script src="scripts/script.js"></script>

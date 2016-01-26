@@ -157,7 +157,7 @@ header nav a:nth-of-type(6) {
 .quests_block article {
 	width: 49%;
 	background-repeat: no-repeat;
-	background-size: auto 100%;
+	background-size: 100% 100%;
 }
 
 .left_article {
@@ -169,19 +169,19 @@ header nav a:nth-of-type(6) {
 }
 
 .saw {
-	background: url(images/saw.jpg);
+	background: url(images/saw.jpg) no-repeat;
 }
 
 .wizard {
-	background: #674172;
+	background:url(images/wizard.jpg) no-repeat;
 }
 
 .robbers {
-	background: #674172;
+	background: url(images/robbers.jpg) no-repeat;
 }
 
 .sert {
-	background: #674172;
+	background: url(images/gift.jpg) no-repeat;
 }
 
 .quests_block h2 {
@@ -189,6 +189,10 @@ header nav a:nth-of-type(6) {
 	position: relative;
 	left: 1.5em;
 	top: 1em;
+}
+
+.quests_block h2 {
+	text-shadow: 1px 1px 5px #361b28, -1px -1px 5px #361b28;
 }
 
 .schedule {
@@ -247,7 +251,6 @@ main article p {
 	margin-left: 5em;
 	float: left;
 }
-
 
 .inf_2 p {
 	margin-right: 5em;
@@ -444,7 +447,6 @@ footer li:nth-of-type(4):before {
 	display: inline-block;
 	position: relative;
 }
-
 .schedule_header .circle:hover {
 	background: #FF7F7F !important;
 }
@@ -582,13 +584,15 @@ footer li:nth-of-type(4):before {
 }
 
 .schedule aside:nth-of-type(3) {
-	top: 440px;
+	top: 430px;
 }
 
 
 .schedule aside h3 {
 	font-size: 1.7em;
 	color: #c22e36;
+	display: inline-block;
+	width: 140px;
 }
 
 .schedule aside div {
@@ -689,9 +693,92 @@ footer li:nth-of-type(4):before {
 .arrow_left,
 .arrow_right,
 .circle,
-.time {
+.time,
+.book_this {
 	cursor: pointer;
 }
 
 
 /* Shcedule end */
+
+
+
+/* Modal window */
+
+
+.modal_block {
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, 0.6);
+	position: fixed;
+	top: 0;
+	display: none;
+	z-index: 5;
+}
+
+.modal_window {
+	width: 300px;
+	height: 350px;
+	background: #993333;
+	color: white;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	margin: -175px 0 0 -150px;
+}
+
+.modal_window span {
+	display: inline-block;
+	background: #1c1c1c;
+	padding: 5px 12px;
+	margin: 0 auto;
+	margin-right: 7px;
+	text-align: center;
+}
+
+.date_block {
+	width: 100%;
+	text-align: center;
+	margin: 15px 0;
+}
+
+.quest_name {
+	display: block !important;
+	width: 100px;
+	margin: 0 auto !important;
+}
+
+.input_block {
+	position: relative;
+	top: 30px;	
+}
+
+.modal_block input {
+	margin: 15px auto 0 auto;
+	display: block;
+	border: none;
+	padding: 5px 10px;
+}
+
+.modal_block input:focus {
+	outline: 2px black solid;
+}
+
+.book_this {
+	width: 150px;
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+	padding: 7px 10px;
+	margin: 0 0 30px -75px;
+	background: white;
+	border: none;
+	font-size: 1.15em;
+}
+
+.book_this:focus {
+	outline: 2px black solid;
+}
+
+
+/* Modal window end */
