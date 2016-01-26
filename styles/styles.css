@@ -17,9 +17,7 @@ html {
 	max-width: 100%;
 }
 
-body {
-	overflow: hidden;
-}
+
 
 /* Basic end */
 
@@ -350,6 +348,7 @@ footer li {
 
 footer iframe {
 	width: 85%;
+	max-height: 90vh !important;
 	position: relative;
 	top: 10em;
 	left: 7.5%;
