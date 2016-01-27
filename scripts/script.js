@@ -592,4 +592,11 @@ function getTime(event) {
 }
 
 
+// Set month
+
+var month_in_modal = document.getElementById("month_in_modal");
+
+month_in_modal.innerHTML = set_month;
+
+
 /* Modal window end */

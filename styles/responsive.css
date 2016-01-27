@@ -228,12 +228,11 @@
 	}
 	footer iframe {
 		width: 100%;
-		height: 85vh;
+		height: 80vh;
 		position: relative;
-		top: 7em;
+		top: 0;
 		left: 0;
 		margin-bottom: 0;
-		overflow: hidden;
 	}
 	header {
 		height: 1800px;
@@ -243,9 +242,9 @@
 @media all and (orientation: portrait) {
 	footer iframe {
 		width: 100%;
-		height: 75vh !important;
+		height: 65vh !important;
 		position: relative;
-		top: 7em;
+		top: 0;
 		left: 0;
 		margin-bottom: 3em;
 	}
@@ -285,7 +284,7 @@
 		position: relative;
 		top: 4em;
 		font-size: 0.9em;
-		margin-bottom: 1em;
+		margin-bottom: -5em;
 	}
 	footer li {
 		font-size: 2em;

@@ -4,7 +4,7 @@
 	<meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-	<title> Лабиринтик </title>
+	<title> Лабиринт </title>
 	<link rel="stylesheet" href="styles/reset.css">
 	<link rel="stylesheet" href="styles/styles.css">
 	<link rel="stylesheet" href="styles/responsive.css">
@@ -21,17 +21,17 @@
 
 		<a href="#"> Отзывы </a>
 
-		<a href="#" class="present"> Подарочный <span class="pres"> сертификат </span> </a>
+		<a href="pages/gift/gift.html" class="present"> Подарочный <span class="pres"> сертификат </span> </a>
 
 		<a href="#about_quest"> О квесте </a>
 
 		<a href="#contacts" class="contacts"> Контакты </a>
 
-		<a href="#" class="key"> Франшиза </a>
+		<a href="pages/franchise/franchise.html" class="key"> Франшиза </a>
 
 	</nav>
 
-	<a href="#"> <!-- LINK TO MAIN PAGE -->
+	<a href="#" onclick="window.location.reload()">
 
 		<div class="logo"> 
 
@@ -263,7 +263,7 @@
 
 <main>
 
-	<h2> <a name="about_quest"> Информация </a> </h2>
+	<h2> <a name="about_quest" id="inf_scroll"> Информация </a> </h2>
 
 	<article class="inf_1">
 
@@ -350,15 +350,17 @@
 
 		<li>	пр. Ленина, д. 76	</li>
 
-		<li>	8 (815) 70-70-26	</li>
+		<li>	<a href="tel:8815707026"> 8 (815) 70-70-26	</li>
 
-		<li>	vk.com/group_quest51/	</li>
+		<li>	<a href="http://vk.com/labirint51"> vk.com/group_quest51 </a>	</li>
 
-		<li>	quest@gmail.com	</li>
+		<li>	<a href="mailto:quest@gmail.com"> quest@gmail.com </a>	</li>
 
 	</ul>
 
 	<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d11461.821008002647!2d33.081283!3d68.955314!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x44340fc4d480426b%3A0xf5d7287c38f98a63!2z0L_RgC4g0JvQtdC90LjQvdCwLCAyNiwg0JzRg9GA0LzQsNC90YHQuiwg0JzRg9GA0LzQsNC90YHQutCw0Y8g0L7QsdC7Liwg0KDQvtGB0YHQuNGPLCAxODMwMTA!5e0!3m2!1sru!2s!4v1453033954215" width="800" height="600" frameborder="0" style="border:0" allowfullscreen></iframe>
+
+	<span class="copyright"> © 2016 Лабиринт </span>
 
 </footer>
 
@@ -370,7 +372,7 @@
 		<section class="date_block modal">
 			
 			<span class="date_number modal" id="selected_date">  </span>
-			<span class="date_month modal"> October </span>
+			<span class="date_month modal" id="month_in_modal">  </span>
 			<span class="date_time modal" id="selected_time">  </span>
 
 		</section>

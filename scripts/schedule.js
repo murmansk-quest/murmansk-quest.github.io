@@ -1,13 +1,13 @@
-var set_month = "october";	  			// Установить месяц
+var set_month = "октябрь";	  			// Установить месяц
 
 var set_day_in_month = "31";   			// Усатановить кол-во дней в месяце
 
 
-var set_first_price = "2000rub";   		// Установить первую цену
+var set_first_price = "2000руб";   		// Установить первую цену
 
-var set_second_price = "2500rub";  		// Установить вторую цену
+var set_second_price = "2500руб";  		// Установить вторую цену
 
-var set_third_price = "3000rub";   		// Установить третью цену
+var set_third_price = "3000руб";   		// Установить третью цену
 
 
 var quest_one = "Пила";			// Установить название первого квеста

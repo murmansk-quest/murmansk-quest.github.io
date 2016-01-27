@@ -212,6 +212,7 @@ header nav a:nth-of-type(6) {
 
 main {
 	width: 100%;
+	display: block;
 	background: #1c1c1c;
 	padding-bottom: 5em;
 }
@@ -269,12 +270,19 @@ main article p {
 main article p .inf_title {
 	width: 9em;
 	height: 9em;
-	background: #2f2f2f;
+	background: url(images/icon_1.png);
+	background-size: 100% 100%;
 	display: inline-block;
 	z-index: 5;
 	position: relative;
 	left: 0.5em;
 	top: 0.5em;
+}
+
+main article:nth-of-type(2) p .inf_title,
+main article:nth-of-type(3) p .inf_title  {
+	background: url(images/icon_2.png);
+	background-size: 100% 100%;
 }
 
 .inf_2 .inf_title {
@@ -352,13 +360,18 @@ footer li {
 	list-style: none;
 }
 
+footer li a {
+	color: #2f2f2f;
+	text-decoration: none;
+}
+
 footer iframe {
 	width: 85%;
 	max-height: 90vh !important;
 	position: relative;
 	margin-top: 10em;
 	left: 7.5%;
-	margin-bottom: 3em;
+	margin-bottom: 5em;
 }
 
 footer li:nth-of-type(1):before {
@@ -409,6 +422,14 @@ footer li:nth-of-type(4):before {
 	left: -0.3em;
 }
 
+.copyright {
+	position: absolute;
+	bottom: 1em;
+	left: 48%;
+	font-size: 1.2em;
+	color: #C5232B;
+}
+
 /* Footer end */
 
 
@@ -455,7 +476,9 @@ footer li:nth-of-type(4):before {
 	border-radius: 50%;
 	display: inline-block;
 	position: relative;
+	transition: all 0.5s;
 }
+
 .schedule_header .circle:hover {
 	background: #FF7F7F !important;
 }
@@ -531,7 +554,7 @@ footer li:nth-of-type(4):before {
 	position: absolute;
 	display: inline-block;
 	right: 5px;
-	top: 7px;
+	top: 10px;
 }
 
 .arrow_left {
@@ -561,7 +584,7 @@ footer li:nth-of-type(4):before {
 	background: black;
 	position: absolute;
 	left: -10px;
-	top: 5px;
+	top: 3px;
 }
 
 .arrow_left_svg {
@@ -637,14 +660,15 @@ footer li:nth-of-type(4):before {
 }
 
 .time {
-	border-right: 1px red solid;
+	border-right: 1px #C5232B solid;
 	padding-left: 10px;
 	position: relative;
 	top: -23px;
+	transition: all 0.5s;
 }
 
 .time:hover {
-	background: #c22e36;
+	background: #C5232B;
 }
 
 .price:last-of-type .time:last-of-type {
