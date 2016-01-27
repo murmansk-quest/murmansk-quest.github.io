@@ -14,8 +14,8 @@ td,article, aside, canvas, details, embed,
 figure, figcaption, footer, header, hgroup,
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
-margin: 0;
-padding: 0;
+	margin: 0;
+	padding: 0;
 }
 
 a {
@@ -174,129 +174,74 @@ main h2 {
 /* Table */
 
 .table {
-	width: 65%;
+	width: 70%;
+	min-height: 500px;
 	background: white;
 	margin: 30px auto 0 auto;
 	color: black;
-	padding: 15px 0 15px 55px;
+	padding: 25px 0 5px 15px;
+	font-size: 1.3em;
 }
 
-.table article {
-	width: 100%;
+.price_block {
 	display: inline-block;
-	margin-top: 1em;
 }
 
-h3 {
-	width: 12%;
-	min-width: 80px;
-	height: 50px;
+.price {
+	display: inline-block;
+	position: relative;
+	left: 30px;
+}
+
+.price_block aside {
+	width: 100px;
 	float: left;
 }
 
-.weekday {
-	font-size: 0.7em;
-}
-
-.time_block {
-	width: 88%;
-	height: 50px;
-	float: right;
+.bottom_price {
+	text-align: center;
 	position: relative;
+	top: 25px;
+	color: red;
+	background: url(images/line.png) repeat-x;
+	background-position: 0 34%;
 }
 
 .time {
-	width: 70px;
-	display: inline-block;	
-	border-left: 1px #c22e36 solid;
-	font-size: 1.3em;
+	width: 79px;
+	height: 30px;
+	display: block;
+	float: left;
+	font-size: 1.1em;
 	text-align: center;
+	border-left: 1px red solid;
 }
 
-.price_1 {
-	width: 300px;
-	height: 50px;
-	position: relative;
+.price .time:first-of-type {
+	width: 79px;
+	padding: 0 7px 0 0;
+}
+
+.price:first-of-type  .time:first-of-type {
+	width: 79px;
+	padding: 0 7px 0 0;
+	border: none;
+	text-align: !important;
+}
+
+.price .time:first-of-type:before {
+	content: "";
+	width: 15px;
+	height: 15px;
 	display: inline-block;
-}
-
-.price {
-	width: 100%;
-	position: absolute;
-	bottom: 0;
-	border-top: 1px black solid;
-	text-align: center;
-	font-size: 0.8em;
-	color: #c6444b;
-}
-
-.circle_1 {
-	width: 10px;
-	height: 10px;
-	border-radius: 50%;
-	background: white;
-	border: 1px black solid;
-	display: inline-block;
-	position: absolute;
-	left: 0;
-	top: -7px;
-}
-
-.circle_2 {
-	width: 10px;
-	height: 10px;
-	border-radius: 50%;
-	background: white;
-	border: 1px black solid;
-	display: inline-block;
-	position: absolute;
-	right: 0;
-	top: -7px;
-}
-
-.price_2 {
 	position: relative;
-	left: -6px;
+	background: url(images/small_circle.jpg);
+	top: 30px;
+	left: -7px;
+	z-index: 5;
 }
 
-.price {
-	transform: scaleX(1.03);
-}
 
-.price_inner_2 {
-	width: 219px;
-	transform: scaleX(1.063);
-}
-
-.price_3 {
-	width: 75px;
-	transform: scaleX(1.06);
-	position: relative;
-	left: -88.5px;
-}
-
-.price_inner_3 {
-	transform-origin: 100% 0;
-	transform: scaleX(1.081);
-}
-
-.price_4 {
-	width: 20%;
-	position: relative;
-	left: -85px;
-}
-
-.price_1 span:nth-of-type(4) {
-	color: #cdcdcd;
-}
-
-.table article:first-of-type {
-	margin-top: 2em
-}
-
-.table article:last-of-type {
-	margin-bottom: 2em
-}
 
 /* Table end */
 
