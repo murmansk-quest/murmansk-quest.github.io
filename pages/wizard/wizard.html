@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title> Франшиза </title>
+	<link rel="shortcut icon" href="../../styles/images/favicon.png" type="image/x-icon">
+	<link href='https://fonts.googleapis.com/css?family=Poiret+One&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r58/three.min.js"></script>
+	<script src="https://80dbf30da38766db01b4542055b9a4196db1081d.googledrive.com/host/0BzjYB_Ch9pbsRllteUJkazlWT1E/threex.planets.js"></script>
+	<style>
+
+		html, body {
+			width: 100%;
+			height: 100%;
+			overflow: hidden;
+		}
+
+		body{
+		  background-color: #000000;
+		  margin: 0px;
+		  background-image:url(' http://xanmia.github.io/Light-Speed-Ready/images/starb.png');
+		  background-size:   cover;                 
+		  background-repeat: no-repeat;
+		}
+
+		#dir{
+		    background-color: #ffffff;
+		    position: absolute;
+		    font-family:"Times New Roman";
+		    font-size:12px;
+		    font-weight:bold;
+		    min-width:100px;
+		    text-align:center;
+		    right: 5px;
+		    top: 5px;
+		    opacity:0.5;
+		}
+
+
+		.info {
+			width: 370px;
+			height: 50px;
+			position: absolute;
+			color: white;
+			display: inline-block;
+			font-size: 2em;
+			font-family: 'Poiret One', cursive;
+			left: 50%;
+			top: 50%;
+			margin-left: -185px;
+			margin-top: -25px;
+			z-index: 5;
+		}
+
+		.about {
+			position: absolute;
+			right: 7px;
+			bottom: 5px;
+			color: white;
+			font-family: 'Poiret One', cursive;
+			text-decoration: none;
+			z-index: 5;
+		}
+
+		
+	</style>
+</head>
+
+<body>
+
+<span class="info"> Посмотри на звёзды пока </span>
+
+<a href="http://codepen.io/Xanmia/pen/bAypE" class="about"> A PEN BY Xanmia </a>
+
+
+<script>
+	
+	var renderer	= new THREE.WebGLRenderer({
+		antialias	: true
+	});
+	renderer.setSize( window.innerWidth, window.innerHeight );
+	document.body.appendChild( renderer.domElement );
+	renderer.shadowMapEnabled	= true
+	//////////////settings/////////
+	var actionZ = 0; //on left click action
+	var rotationA = 3.1; // amount of rotation
+	var movementSpeed = 10;
+	var zoomSpeed = 10;
+	var totalObjects = 40000;
+	var rotated = false; 
+	/////////////////////////////////
+	var updateFcts	= [];
+	var scene	= new THREE.Scene();
+	var camera	= new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.01, 100000 );
+	camera.position.z = 2000;
+	camera.position.x = -10000;
+
+	var light	= new THREE.AmbientLight( 0x535353 )
+	scene.add( light )
+
+	var light	= new THREE.DirectionalLight( 0xcccccc, 1 )
+	light.position.set(-7,5,5)
+	scene.add( light )
+
+
+	 var mesh	= THREEx.Planets.createMercury()
+	 mesh.scale = new THREE.Vector3(3000,3000,3000);
+ 	 mesh.position = new THREE.Vector3(-10000,18000,-70000);
+	 scene.add(mesh)
+
+	 var vmesh	= THREEx.Planets.createVenus()
+	 vmesh.scale = new THREE.Vector3(4000,4000,4000);
+	 vmesh.position = new THREE.Vector3(2000,0,29000);
+ 	updateFcts.push(function(delta, now){
+ 		vmesh.rotation.y += 1/5 * delta;		
+ 	})
+	 scene.add(vmesh)
+
+	 var jmesh	= THREEx.Planets.createJupiter()
+	 jmesh.scale = new THREE.Vector3(7000,7000,7000);
+	 jmesh.position = new THREE.Vector3(1000,-4000,-24000);
+  	updateFcts.push(function(delta, now){
+  		jmesh.rotation.y += 1/8 * delta;		
+  	})
+	 scene.add(jmesh)
+	 
+	
+	var geometry = new THREE.Geometry();
+
+	for (i = 0; i < totalObjects; i ++) 
+	{ 
+	  var vertex = new THREE.Vector3();
+	  vertex.x = Math.random()*40000-20000;
+	  vertex.y = Math.random()*7000-3500;
+	  vertex.z = Math.random()*7000-3500;
+	  geometry.vertices.push( vertex );
+	}
+
+	var material = new THREE.ParticleBasicMaterial( { size: 6 });
+	var particles = new THREE.ParticleSystem( geometry, material );
+	  
+	scene.add( particles ); 
+
+	updateFcts.push(function(){
+		renderer.render( scene, camera );		
+	})
+	
+	var lastTimeMsec= null
+	requestAnimationFrame(function animate(nowMsec){
+		// keep looping
+		requestAnimationFrame( animate );
+		
+        if (!rotated && camera.position.x < 11000)
+        {
+          if(camera.position.x > 10000){
+            rotated = true;
+            if (camera.rotation.y < rotationA){
+              camera.rotation.y += .015;
+              rotated = false;
+            }
+            if (camera.position.z > -2000){
+              camera.position.z -= 19;
+              rotated = false;
+            }
+          }
+          else{
+          camera.position.x += movementSpeed;
+          camera.position.z += actionZ;
+          }
+        }
+        else if(rotated && camera.position.x > -11000){
+					if(camera.position.x < -10000){
+            rotated = false;
+            if (camera.rotation.y > 0){
+              camera.rotation.y -= .015;
+              rotated = true;
+            }
+            if (camera.position.z < 2000){
+              camera.position.z += 19;
+              rotated = true;
+            }
+          }
+          else{
+          camera.position.x -= movementSpeed;
+          camera.position.z -= actionZ;
+          }
+	  }
+		
+		// measure time ---for planets
+		lastTimeMsec	= lastTimeMsec || nowMsec-1000/60
+		var deltaMsec	= Math.min(200, nowMsec - lastTimeMsec)
+		lastTimeMsec	= nowMsec
+
+		updateFcts.forEach(function(updateFn){
+			updateFn(deltaMsec/1000, nowMsec/1000)
+		})
+	})
+	
+	window.addEventListener( 'mousedown', onDocumentMouseDown, false );
+	window.addEventListener( 'mouseup', onDocumentMouseUp, false );
+	window.addEventListener( 'resize', onWindowResize, false );
+
+	function onWindowResize() {
+					camera.aspect = window.innerWidth / window.innerHeight;
+					camera.updateProjectionMatrix();
+
+					renderer.setSize( window.innerWidth, window.innerHeight );
+
+				}
+	function onDocumentMouseDown(){
+	    event.preventDefault();
+	    actionZ = -zoomSpeed;
+	}
+
+	function onDocumentMouseUp(){
+	   actionZ = 0;
+	}
+
+</script>
+
+</body>
+</html>
