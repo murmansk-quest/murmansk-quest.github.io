@@ -26,9 +26,6 @@
 }
 
 @media all and (max-width: 1219px) {
-	.table {
-		width: 80%;
-	}
 	.to_top {
 		display: none;
 	}
@@ -51,29 +48,24 @@
 	}
 	.table {
 		width: 100%;
+		font-size: 1em;
 	}
 }
 
-@media all and (max-width: 830px) {
-	.price_block {
-		transform: scale(0.8);
+@media all and (max-width: 933px) {
+	.price_block aside {
+		height: 7em;
+		width: 9%;
+		float: left;
+	}
+	.price {
+		margin-bottom: 2em;
 	}
 }
 
 @media all and (max-width: 780px) {
-	.price:not(:first-of-type) {
-		position: relative;
-		top: 50px;
-		left: 127px;
-	}
 	.price .time:first-of-type {
 		border: none;
-	}
-	.price_block aside {
-		width: 100px;
-		float: left;
-		position: relative;
-		left: -50px;
 	}
 }
 
@@ -83,6 +75,49 @@
 	}
 	nav a {
 		margin-left: 1em !important;	
+	}
+	.table {
+		font-size: 0.9em;
+		padding: 1em 0 0 0 !important;
+	}
+}
+
+@media all and (max-width: 626px) {
+	.price_block aside {
+		height: 8em;
+	}
+	.price {
+		left: 1em;
+	}
+}
+
+@media all and (max-width: 583px) {
+	.price_block:first-of-type aside {
+		width: 100%;
+		height: auto;
+		margin-bottom: 1em;
+		text-align: center;
+		float: none;
+		border-top: none;
+	}
+	.price_block aside {
+		width: 100%;
+		height: auto;
+		margin-bottom: 1em;
+		text-align: center;
+		float: none;
+		border-top: 1px grey solid;
+	}
+	.time_block {
+		width: 100% !important;
+		position: relative;
+		left: 0;
+		margin: 0 auto;
+		display: block;
+		text-align: center;
+	}
+	.price {
+		left: 0;
 	}
 }
 
@@ -116,35 +151,29 @@
 		background-size: 140px auto;
 		padding-left: 10px;
 	}
+	.time {
+		width: 2.9em;
+		border: none;
+		padding: 0 !important;
+		display: block !important;
+		float: right !important;
+	}
+	.price .time:first-of-type:before {
+		display: none;
+	}
 }
 
-@media all and (max-width: 450px) {
-	.table {
-		padding: 0;
-	}
-	.price_block {
-		width: 100%;
-	}
+@media all and (max-width: 430px) {
 	.price_block aside {
-		width: 100%;
+		height: auto;
 		text-align: center;
+		width: 100%;
 		float: none;
-		margin-bottom: 21px;
+		margin-bottom: 1em;
 	}
-	.price_block aside span {
-		width: 100%;
-		display: block;
-		text-align: center;
-		position: relative;
-		left: 10px;
-	}
-	.price {
-		left: 0 !important;
-		padding: 0;
-	}
-	.time {
-		width: 70px;
-		font-size: 1em;
+	.time_block {
+		width: 80%;
+		float: none;
 	}
 }
 
@@ -171,13 +200,37 @@
 		left: -60px;
 		top: 65px;
 	}
+	.price_block aside {
+		text-align: center;
+		width: 100%;
+		float: none;
+		margin-bottom: 1em;
+	}
+	.time_block {
+		width: 80%;
+		float: none;
+	}
+}
+
+@media all and (max-width: 350px) {
+	.time {
+		width: 2.7em;
+		font-size: 1em;
+	}
+	footer nav a  {
+		width: 100vw;
+		display: block;
+		text-align: center;
+		text-decoration: none;
+		margin: 0.7em 0 0 0;
+	}
 }
 
 @media all and (max-width: 318px) {
 	.contacts {
 		position: relative;
 		top: -18px;
-	}	
+	}
 }
 
 

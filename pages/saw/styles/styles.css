@@ -174,70 +174,76 @@ main h2 {
 /* Table */
 
 .table {
-	width: 70%;
-	min-height: 500px;
+	width: 60em;
+	min-height: 20em;
 	background: white;
-	margin: 30px auto 0 auto;
+	margin: 2em auto 0 auto;
 	color: black;
-	padding: 25px 0 5px 15px;
+	padding: 1.7em 0 0.3em 0.9em;
 	font-size: 1.3em;
 }
 
 .price_block {
-	display: inline-block;
+	width: 100%;
+	display: block;
+	margin-bottom: 2.5em;
+}
+
+.price_block aside {
+	width: 10%;
+	float: left;
+}
+
+.time_block {
+	width: 91%;
 }
 
 .price {
 	display: inline-block;
 	position: relative;
-	left: 30px;
-}
-
-.price_block aside {
-	width: 100px;
-	float: left;
+	left: 1.9em;
 }
 
 .bottom_price {
 	text-align: center;
 	position: relative;
-	top: 25px;
-	color: red;
+	top: 1.2em;
+	color: #c13037;
 	background: url(images/line.png) repeat-x;
 	background-position: 0 34%;
 }
 
 .time {
-	width: 79px;
-	height: 30px;
+	width: 4.1em;
+	height: 1.4em;
 	display: block;
 	float: left;
 	font-size: 1.1em;
 	text-align: center;
-	border-left: 1px red solid;
+	border-left: 1px #c13037 solid;
 }
 
 .price .time:first-of-type {
-	width: 79px;
-	padding: 0 7px 0 0;
+	width: 3.45em;
+	padding: 0 0.8em 0 0;
 }
 
 .price:first-of-type  .time:first-of-type {
-	width: 79px;
-	padding: 0 7px 0 0;
+	width: 3.45em;
+	padding: 0 0.8em 0 0;
 	border: none;
-	text-align: !important;
 }
 
 .price .time:first-of-type:before {
 	content: "";
-	width: 15px;
-	height: 15px;
+	width: 0.655em;
+	height: 0.65em;
 	display: inline-block;
 	position: relative;
-	background: url(images/small_circle.jpg);
-	top: 30px;
-	left: -7px;
+	background: url(images/small_circle.jpg) no-repeat;
+	background-size: 100% 100%;
+	top: 1.29em;
+	left: -0.33em;
 	z-index: 5;
 }
 
@@ -276,7 +282,7 @@ footer .labirint {
 	background-size: 100% auto;
 	display: inline-block;
 	position: absolute;
-	right: 3.5%;
+	right: 1.7%;
 	bottom: 250px;
 }
 
