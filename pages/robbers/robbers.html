@@ -1,222 +1,1016 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 	<meta charset="utf-8">
-	<title> Франшиза </title>
+	<title> Грабители </title>
+	<link rel="stylesheet" href="styles/styles.css">
+	<link rel="stylesheet" href="styles/responsive.css">
+	<script src="scripts/scripts.js"></script>
 	<link rel="shortcut icon" href="../../styles/images/favicon.png" type="image/x-icon">
-	<link href='https://fonts.googleapis.com/css?family=Poiret+One&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r58/three.min.js"></script>
-	<script src="https://80dbf30da38766db01b4542055b9a4196db1081d.googledrive.com/host/0BzjYB_Ch9pbsRllteUJkazlWT1E/threex.planets.js"></script>
-	<style>
-
-		html, body {
-			width: 100%;
-			height: 100%;
-			overflow: hidden;
-		}
-
-		body{
-		  background-color: #000000;
-		  margin: 0px;
-		  background-image:url(' http://xanmia.github.io/Light-Speed-Ready/images/starb.png');
-		  background-size:   cover;                 
-		  background-repeat: no-repeat;
-		}
-
-		#dir{
-		    background-color: #ffffff;
-		    position: absolute;
-		    font-family:"Times New Roman";
-		    font-size:12px;
-		    font-weight:bold;
-		    min-width:100px;
-		    text-align:center;
-		    right: 5px;
-		    top: 5px;
-		    opacity:0.5;
-		}
-
-
-		.info {
-			width: 370px;
-			height: 50px;
-			position: absolute;
-			color: white;
-			display: inline-block;
-			font-size: 2em;
-			font-family: 'Poiret One', cursive;
-			left: 50%;
-			top: 50%;
-			margin-left: -185px;
-			margin-top: -25px;
-			z-index: 5;
-		}
-
-		.about {
-			position: absolute;
-			right: 7px;
-			bottom: 5px;
-			color: white;
-			font-family: 'Poiret One', cursive;
-			text-decoration: none;
-			z-index: 5;
-		}
-
-		
-	</style>
 </head>
-
 <body>
 
-<span class="info"> Посмотри на звёзды пока </span>
+<a name="top"> </a>
 
-<a href="http://codepen.io/Xanmia/pen/bAypE" class="about"> A PEN BY Xanmia </a>
-
-
-<script>
+<header>
 	
-	var renderer	= new THREE.WebGLRenderer({
-		antialias	: true
-	});
-	renderer.setSize( window.innerWidth, window.innerHeight );
-	document.body.appendChild( renderer.domElement );
-	renderer.shadowMapEnabled	= true
-	//////////////settings/////////
-	var actionZ = 0; //on left click action
-	var rotationA = 3.1; // amount of rotation
-	var movementSpeed = 10;
-	var zoomSpeed = 10;
-	var totalObjects = 40000;
-	var rotated = false; 
-	/////////////////////////////////
-	var updateFcts	= [];
-	var scene	= new THREE.Scene();
-	var camera	= new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.01, 100000 );
-	camera.position.z = 2000;
-	camera.position.x = -10000;
-
-	var light	= new THREE.AmbientLight( 0x535353 )
-	scene.add( light )
-
-	var light	= new THREE.DirectionalLight( 0xcccccc, 1 )
-	light.position.set(-7,5,5)
-	scene.add( light )
-
-
-	 var mesh	= THREEx.Planets.createMercury()
-	 mesh.scale = new THREE.Vector3(3000,3000,3000);
- 	 mesh.position = new THREE.Vector3(-10000,18000,-70000);
-	 scene.add(mesh)
-
-	 var vmesh	= THREEx.Planets.createVenus()
-	 vmesh.scale = new THREE.Vector3(4000,4000,4000);
-	 vmesh.position = new THREE.Vector3(2000,0,29000);
- 	updateFcts.push(function(delta, now){
- 		vmesh.rotation.y += 1/5 * delta;		
- 	})
-	 scene.add(vmesh)
-
-	 var jmesh	= THREEx.Planets.createJupiter()
-	 jmesh.scale = new THREE.Vector3(7000,7000,7000);
-	 jmesh.position = new THREE.Vector3(1000,-4000,-24000);
-  	updateFcts.push(function(delta, now){
-  		jmesh.rotation.y += 1/8 * delta;		
-  	})
-	 scene.add(jmesh)
-	 
-	
-	var geometry = new THREE.Geometry();
-
-	for (i = 0; i < totalObjects; i ++) 
-	{ 
-	  var vertex = new THREE.Vector3();
-	  vertex.x = Math.random()*40000-20000;
-	  vertex.y = Math.random()*7000-3500;
-	  vertex.z = Math.random()*7000-3500;
-	  geometry.vertices.push( vertex );
-	}
-
-	var material = new THREE.ParticleBasicMaterial( { size: 6 });
-	var particles = new THREE.ParticleSystem( geometry, material );
-	  
-	scene.add( particles ); 
-
-	updateFcts.push(function(){
-		renderer.render( scene, camera );		
-	})
-	
-	var lastTimeMsec= null
-	requestAnimationFrame(function animate(nowMsec){
-		// keep looping
-		requestAnimationFrame( animate );
+	<nav>
 		
-        if (!rotated && camera.position.x < 11000)
-        {
-          if(camera.position.x > 10000){
-            rotated = true;
-            if (camera.rotation.y < rotationA){
-              camera.rotation.y += .015;
-              rotated = false;
-            }
-            if (camera.position.z > -2000){
-              camera.position.z -= 19;
-              rotated = false;
-            }
-          }
-          else{
-          camera.position.x += movementSpeed;
-          camera.position.z += actionZ;
-          }
-        }
-        else if(rotated && camera.position.x > -11000){
-					if(camera.position.x < -10000){
-            rotated = false;
-            if (camera.rotation.y > 0){
-              camera.rotation.y -= .015;
-              rotated = true;
-            }
-            if (camera.position.z < 2000){
-              camera.position.z += 19;
-              rotated = true;
-            }
-          }
-          else{
-          camera.position.x -= movementSpeed;
-          camera.position.z -= actionZ;
-          }
-	  }
+		<a href="../../index.html"> Главная </a>
+
+		<a href="https://vk.com/topic-84011705_32212521"> Отзывы </a>
+
+		<a href="../gift/gift.html" class="present"> Подарочный сертификат </a>
+
+		<a href="../../index.html#about_quest"> О квесте </a>
+
+		<a href="../../index.html#contacts" class="contacts"> Контакты </a>
+
+		<a href="../franchise/franchise.html" class="key"> Франшиза </a>
+
+	</nav>
+
+	<a href="../../index.html">
+
+		<div class="logo"> 
+
+			<h2> Мурманск </h2> 
+
+		</div>
+
+	</a>
+
+	<section class="description">
+
+		<h1> Грабители </h1>
 		
-		// measure time ---for planets
-		lastTimeMsec	= lastTimeMsec || nowMsec-1000/60
-		var deltaMsec	= Math.min(200, nowMsec - lastTimeMsec)
-		lastTimeMsec	= nowMsec
+		Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
+		Sit ad aut natus harum repellat ab labore odit repellendus,
+		officia at tempora eos sequi dignissimos necessitatibus 
+		maxime cum architecto velit quo, corporis facere explicabo
+		aspernatur suscipit! Officia eius laudantium nostrum iste
+		optio neque autem aut nam. Aspernatur necessitatibus
+		exercitationem possimus dolores
 
-		updateFcts.forEach(function(updateFn){
-			updateFn(deltaMsec/1000, nowMsec/1000)
-		})
-	})
-	
-	window.addEventListener( 'mousedown', onDocumentMouseDown, false );
-	window.addEventListener( 'mouseup', onDocumentMouseUp, false );
-	window.addEventListener( 'resize', onWindowResize, false );
+	</section>
 
-	function onWindowResize() {
-					camera.aspect = window.innerWidth / window.innerHeight;
-					camera.updateProjectionMatrix();
+</header>
 
-					renderer.setSize( window.innerWidth, window.innerHeight );
+<main>
 
-				}
-	function onDocumentMouseDown(){
-	    event.preventDefault();
-	    actionZ = -zoomSpeed;
-	}
+<h2> Расписание </h2>
 
-	function onDocumentMouseUp(){
-	   actionZ = 0;
-	}
+<span class="date"> 1 февраля - 29 февраля </span>
 
-</script>
+<section class="table">
+
+	<section class="price_block">
+
+		<aside>
+			<span> 1 февраля </span>
+			<span> Понедельник </span>
+		</aside>
+
+		<section class="time_block">
+		
+			<section class="price">
+				<span class="time"> 10:30 </span>
+				<span class="time"> 12:00 </span>
+				<span class="time"> 13:30 </span>
+				<span class="time"> 15:00 </span>
+				<span class="time"> 16:30 </span>
+				<div class="bottom_price"> 2000руб </div> 
+			</section>
+
+			<section class="price">
+				<span class="time"> 18:00 </span>
+				<span class="time"> 19:30 </span>
+				<span class="time"> 21:00 </span>
+				<span class="time"> 22:30 </span>
+				<div class="bottom_price"> 2500руб </div> 
+			</section>
+
+		</section>
+		
+	</section>
+
+	<section class="price_block">
+
+		<aside>
+			<span> 2 февраля </span>
+			<span> Вторник </span>
+		</aside>
+
+		<section class="time_block">
+		
+			<section class="price">
+				<span class="time"> 10:30 </span>
+				<span class="time"> 12:00 </span>
+				<span class="time"> 13:30 </span>
+				<span class="time"> 15:00 </span>
+				<span class="time"> 16:30 </span>
+				<div class="bottom_price"> 2000руб </div> 
+			</section>
+
+			<section class="price">
+				<span class="time"> 18:00 </span>
+				<span class="time"> 19:30 </span>
+				<span class="time"> 21:00 </span>
+				<span class="time"> 22:30 </span>
+				<div class="bottom_price"> 2500руб </div> 
+			</section>
+
+		</section>
+		
+	</section>
+
+	<section class="price_block">
+
+		<aside>
+			<span> 3 февраля </span>
+			<span> Среда </span>
+		</aside>
+
+		<section class="time_block">
+		
+			<section class="price">
+				<span class="time"> 10:30 </span>
+				<span class="time"> 12:00 </span>
+				<span class="time"> 13:30 </span>
+				<span class="time"> 15:00 </span>
+				<span class="time"> 16:30 </span>
+				<div class="bottom_price"> 2000руб </div> 
+			</section>
+
+			<section class="price">
+				<span class="time"> 18:00 </span>
+				<span class="time"> 19:30 </span>
+				<span class="time"> 21:00 </span>
+				<span class="time"> 22:30 </span>
+				<div class="bottom_price"> 2500руб </div> 
+			</section>
+
+		</section>
+		
+	</section>
+
+	<section class="price_block">
+
+		<aside>
+			<span> 4 февраля </span>
+			<span> Четверг</span>
+		</aside>
+
+		<section class="time_block">
+		
+			<section class="price">
+				<span class="time"> 10:30 </span>
+				<span class="time"> 12:00 </span>
+				<span class="time"> 13:30 </span>
+				<span class="time"> 15:00 </span>
+				<span class="time"> 16:30 </span>
+				<div class="bottom_price"> 2000руб </div> 
+			</section>
+
+			<section class="price">
+				<span class="time"> 18:00 </span>
+				<span class="time"> 19:30 </span>
+				<span class="time"> 21:00 </span>
+				<span class="time"> 22:30 </span>
+				<div class="bottom_price"> 2500руб </div> 
+			</section>
+
+		</section>
+		
+	</section>
+
+	<section class="price_block">
+
+		<aside>
+			<span> 5 февраля </span>
+			<span> Пятница </span>
+		</aside>
+
+		<section class="time_block">
+		
+			<section class="price">
+				<span class="time"> 10:30 </span>
+				<span class="time"> 12:00 </span>
+				<span class="time"> 13:30 </span>
+				<span class="time"> 15:00 </span>
+				<div class="bottom_price"> 2000руб </div> 
+			</section>
+
+			<section class="price">
+				<span class="time"> 16:30 </span>
+				<span class="time"> 18:00 </span>
+				<div class="bottom_price"> 2500руб </div> 
+			</section>
+
+			<section class="price">
+				<span class="time"> 19:30 </span>
+				<span class="time"> 21:00 </span>
+				<span class="time"> 22:30 </span>
+				<div class="bottom_price"> 3000руб </div> 
+			</section>
+
+		</section>
+		
+	</section>
+
+	<section class="price_block">
+
+		<aside>
+			<span> 6 ноября </span>
+			<span> Суббота </span>
+		</aside>
+
+		<section class="time_block">
+		
+			<section class="price">
+				<span class="time"> 10:30 </span>
+				<span class="time"> 12:00 </span>									
+				<div class="bottom_price"> 2500руб </div> 
+			</section>
+
+			<section class="price">
+				<span class="time"> 13:30 </span>
+				<span class="time"> 15:00 </span>
+				<span class="time"> 16:30 </span>
+				<span class="time"> 18:00 </span>
+				<span class="time"> 19:30 </span>
+				<span class="time"> 21:00 </span>
+				<span class="time"> 22:30 </span>
+				<div class="bottom_price"> 3000руб </div> 
+			</section>
+
+		</section>
+		
+	</section>
+
+	<section class="price_block">
+
+		<aside>
+			<span> 7 ноября </span>
+			<span> Воскресенье </span>
+		</aside>
+
+		<section class="time_block">
+		
+			<section class="price">
+				<span class="time"> 10:30 </span>
+				<span class="time"> 12:00 </span>									
+				<div class="bottom_price"> 2500руб </div> 
+			</section>
+
+			<section class="price">
+				<span class="time"> 13:30 </span>
+				<span class="time"> 15:00 </span>
+				<span class="time"> 16:30 </span>
+				<span class="time"> 18:00 </span>
+				<span class="time"> 19:30 </span>
+				<span class="time"> 21:00 </span>
+				<span class="time"> 22:30 </span>
+				<div class="bottom_price"> 3000руб </div> 
+			</section>
+
+		</section>
+		
+	</section>
+
+	<section class="price_block">
+
+		<aside>
+			<span> 8 февраля </span>
+			<span> Понедельник </span>
+		</aside>
+
+		<section class="time_block">
+		
+			<section class="price">
+				<span class="time"> 10:30 </span>
+				<span class="time"> 12:00 </span>
+				<span class="time"> 13:30 </span>
+				<span class="time"> 15:00 </span>
+				<span class="time"> 16:30 </span>
+				<div class="bottom_price"> 2000руб </div> 
+			</section>
+
+			<section class="price">
+				<span class="time"> 18:00 </span>
+				<span class="time"> 19:30 </span>
+				<span class="time"> 21:00 </span>
+				<span class="time"> 22:30 </span>
+				<div class="bottom_price"> 2500руб </div> 
+			</section>
+
+		</section>
+		
+	</section>
+
+	<section class="price_block">
+
+		<aside>
+			<span> 9 февраля </span>
+			<span> Вторник </span>
+		</aside>
+
+		<section class="time_block">
+		
+			<section class="price">
+				<span class="time"> 10:30 </span>
+				<span class="time"> 12:00 </span>
+				<span class="time"> 13:30 </span>
+				<span class="time"> 15:00 </span>
+				<span class="time"> 16:30 </span>
+				<div class="bottom_price"> 2000руб </div> 
+			</section>
+
+			<section class="price">
+				<span class="time"> 18:00 </span>
+				<span class="time"> 19:30 </span>
+				<span class="time"> 21:00 </span>
+				<span class="time"> 22:30 </span>
+				<div class="bottom_price"> 2500руб </div> 
+			</section>
+
+		</section>
+		
+	</section>
+
+	<section class="price_block">
+
+		<aside>
+			<span> 10 февраля </span>
+			<span> Среда </span>
+		</aside>
+
+		<section class="time_block">
+		
+			<section class="price">
+				<span class="time"> 10:30 </span>
+				<span class="time"> 12:00 </span>
+				<span class="time"> 13:30 </span>
+				<span class="time"> 15:00 </span>
+				<span class="time"> 16:30 </span>
+				<div class="bottom_price"> 2000руб </div> 
+			</section>
+
+			<section class="price">
+				<span class="time"> 18:00 </span>
+				<span class="time"> 19:30 </span>
+				<span class="time"> 21:00 </span>
+				<span class="time"> 22:30 </span>
+				<div class="bottom_price"> 2500руб </div> 
+			</section>
+
+		</section>
+		
+	</section>
+
+	<section class="price_block">
+
+		<aside>
+			<span> 11 февраля </span>
+			<span> Четверг</span>
+		</aside>
+
+		<section class="time_block">
+		
+			<section class="price">
+				<span class="time"> 10:30 </span>
+				<span class="time"> 12:00 </span>
+				<span class="time"> 13:30 </span>
+				<span class="time"> 15:00 </span>
+				<span class="time"> 16:30 </span>
+				<div class="bottom_price"> 2000руб </div> 
+			</section>
+
+			<section class="price">
+				<span class="time"> 18:00 </span>
+				<span class="time"> 19:30 </span>
+				<span class="time"> 21:00 </span>
+				<span class="time"> 22:30 </span>
+				<div class="bottom_price"> 2500руб </div> 
+			</section>
+
+		</section>
+		
+	</section>
+
+	<section class="price_block">
+
+		<aside>
+			<span> 12 февраля </span>
+			<span> Пятница </span>
+		</aside>
+
+		<section class="time_block">
+		
+			<section class="price">
+				<span class="time"> 10:30 </span>
+				<span class="time"> 12:00 </span>
+				<span class="time"> 13:30 </span>
+				<span class="time"> 15:00 </span>
+				<div class="bottom_price"> 2000руб </div> 
+			</section>
+
+			<section class="price">
+				<span class="time"> 16:30 </span>
+				<span class="time"> 18:00 </span>
+				<div class="bottom_price"> 2500руб </div> 
+			</section>
+
+			<section class="price">
+				<span class="time"> 19:30 </span>
+				<span class="time"> 21:00 </span>
+				<span class="time"> 22:30 </span>
+				<div class="bottom_price"> 3000руб </div> 
+			</section>
+
+		</section>
+		
+	</section>
+
+	<section class="price_block">
+
+		<aside>
+			<span> 13 ноября </span>
+			<span> Суббота </span>
+		</aside>
+
+		<section class="time_block">
+		
+			<section class="price">
+				<span class="time"> 10:30 </span>
+				<span class="time"> 12:00 </span>									
+				<div class="bottom_price"> 2500руб </div> 
+			</section>
+
+			<section class="price">
+				<span class="time"> 13:30 </span>
+				<span class="time"> 15:00 </span>
+				<span class="time"> 16:30 </span>
+				<span class="time"> 18:00 </span>
+				<span class="time"> 19:30 </span>
+				<span class="time"> 21:00 </span>
+				<span class="time"> 22:30 </span>
+				<div class="bottom_price"> 3000руб </div> 
+			</section>
+
+		</section>
+		
+	</section>
+
+	<section class="price_block">
+
+		<aside>
+			<span> 14 ноября </span>
+			<span> Воскресенье </span>
+		</aside>
+
+		<section class="time_block">
+		
+			<section class="price">
+				<span class="time"> 10:30 </span>
+				<span class="time"> 12:00 </span>									
+				<div class="bottom_price"> 2500руб </div> 
+			</section>
+
+			<section class="price">
+				<span class="time"> 13:30 </span>
+				<span class="time"> 15:00 </span>
+				<span class="time"> 16:30 </span>
+				<span class="time"> 18:00 </span>
+				<span class="time"> 19:30 </span>
+				<span class="time"> 21:00 </span>
+				<span class="time"> 22:30 </span>
+				<div class="bottom_price"> 3000руб </div> 
+			</section>
+
+		</section>
+		
+	</section>
+
+	<section class="price_block">
+
+		<aside>
+			<span> 15 февраля </span>
+			<span> Понедельник </span>
+		</aside>
+
+		<section class="time_block">
+		
+			<section class="price">
+				<span class="time"> 10:30 </span>
+				<span class="time"> 12:00 </span>
+				<span class="time"> 13:30 </span>
+				<span class="time"> 15:00 </span>
+				<span class="time"> 16:30 </span>
+				<div class="bottom_price"> 2000руб </div> 
+			</section>
+
+			<section class="price">
+				<span class="time"> 18:00 </span>
+				<span class="time"> 19:30 </span>
+				<span class="time"> 21:00 </span>
+				<span class="time"> 22:30 </span>
+				<div class="bottom_price"> 2500руб </div> 
+			</section>
+
+		</section>
+		
+	</section>
+
+	<section class="price_block">
+
+		<aside>
+			<span> 16 февраля </span>
+			<span> Вторник </span>
+		</aside>
+
+		<section class="time_block">
+		
+			<section class="price">
+				<span class="time"> 10:30 </span>
+				<span class="time"> 12:00 </span>
+				<span class="time"> 13:30 </span>
+				<span class="time"> 15:00 </span>
+				<span class="time"> 16:30 </span>
+				<div class="bottom_price"> 2000руб </div> 
+			</section>
+
+			<section class="price">
+				<span class="time"> 18:00 </span>
+				<span class="time"> 19:30 </span>
+				<span class="time"> 21:00 </span>
+				<span class="time"> 22:30 </span>
+				<div class="bottom_price"> 2500руб </div> 
+			</section>
+
+		</section>
+		
+	</section>
+
+	<section class="price_block">
+
+		<aside>
+			<span> 17 февраля </span>
+			<span> Среда </span>
+		</aside>
+
+		<section class="time_block">
+		
+			<section class="price">
+				<span class="time"> 10:30 </span>
+				<span class="time"> 12:00 </span>
+				<span class="time"> 13:30 </span>
+				<span class="time"> 15:00 </span>
+				<span class="time"> 16:30 </span>
+				<div class="bottom_price"> 2000руб </div> 
+			</section>
+
+			<section class="price">
+				<span class="time"> 18:00 </span>
+				<span class="time"> 19:30 </span>
+				<span class="time"> 21:00 </span>
+				<span class="time"> 22:30 </span>
+				<div class="bottom_price"> 2500руб </div> 
+			</section>
+
+		</section>
+		
+	</section>
+
+	<section class="price_block">
+
+		<aside>
+			<span> 18 февраля </span>
+			<span> Четверг</span>
+		</aside>
+
+		<section class="time_block">
+		
+			<section class="price">
+				<span class="time"> 10:30 </span>
+				<span class="time"> 12:00 </span>
+				<span class="time"> 13:30 </span>
+				<span class="time"> 15:00 </span>
+				<span class="time"> 16:30 </span>
+				<div class="bottom_price"> 2000руб </div> 
+			</section>
+
+			<section class="price">
+				<span class="time"> 18:00 </span>
+				<span class="time"> 19:30 </span>
+				<span class="time"> 21:00 </span>
+				<span class="time"> 22:30 </span>
+				<div class="bottom_price"> 2500руб </div> 
+			</section>
+
+		</section>
+		
+	</section>
+
+	<section class="price_block">
+
+		<aside>
+			<span> 19 февраля </span>
+			<span> Пятница </span>
+		</aside>
+
+		<section class="time_block">
+		
+			<section class="price">
+				<span class="time"> 10:30 </span>
+				<span class="time"> 12:00 </span>
+				<span class="time"> 13:30 </span>
+				<span class="time"> 15:00 </span>
+				<div class="bottom_price"> 2000руб </div> 
+			</section>
+
+			<section class="price">
+				<span class="time"> 16:30 </span>
+				<span class="time"> 18:00 </span>
+				<div class="bottom_price"> 2500руб </div> 
+			</section>
+
+			<section class="price">
+				<span class="time"> 19:30 </span>
+				<span class="time"> 21:00 </span>
+				<span class="time"> 22:30 </span>
+				<div class="bottom_price"> 3000руб </div> 
+			</section>
+
+		</section>
+		
+	</section>
+
+	<section class="price_block">
+
+		<aside>
+			<span> 20 ноября </span>
+			<span> Суббота </span>
+		</aside>
+
+		<section class="time_block">
+		
+			<section class="price">
+				<span class="time"> 10:30 </span>
+				<span class="time"> 12:00 </span>									
+				<div class="bottom_price"> 2500руб </div> 
+			</section>
+
+			<section class="price">
+				<span class="time"> 13:30 </span>
+				<span class="time"> 15:00 </span>
+				<span class="time"> 16:30 </span>
+				<span class="time"> 18:00 </span>
+				<span class="time"> 19:30 </span>
+				<span class="time"> 21:00 </span>
+				<span class="time"> 22:30 </span>
+				<div class="bottom_price"> 3000руб </div> 
+			</section>
+
+		</section>
+		
+	</section>
+
+	<section class="price_block">
+
+		<aside>
+			<span> 21 ноября </span>
+			<span> Воскресенье </span>
+		</aside>
+
+		<section class="time_block">
+		
+			<section class="price">
+				<span class="time"> 10:30 </span>
+				<span class="time"> 12:00 </span>									
+				<div class="bottom_price"> 2500руб </div> 
+			</section>
+
+			<section class="price">
+				<span class="time"> 13:30 </span>
+				<span class="time"> 15:00 </span>
+				<span class="time"> 16:30 </span>
+				<span class="time"> 18:00 </span>
+				<span class="time"> 19:30 </span>
+				<span class="time"> 21:00 </span>
+				<span class="time"> 22:30 </span>
+				<div class="bottom_price"> 3000руб </div> 
+			</section>
+
+		</section>
+		
+	</section>
+
+	<section class="price_block">
+
+		<aside>
+			<span> 21 февраля </span>
+			<span> Понедельник </span>
+		</aside>
+
+		<section class="time_block">
+		
+			<section class="price">
+				<span class="time"> 10:30 </span>
+				<span class="time"> 12:00 </span>
+				<span class="time"> 13:30 </span>
+				<span class="time"> 15:00 </span>
+				<span class="time"> 16:30 </span>
+				<div class="bottom_price"> 2000руб </div> 
+			</section>
+
+			<section class="price">
+				<span class="time"> 18:00 </span>
+				<span class="time"> 19:30 </span>
+				<span class="time"> 21:00 </span>
+				<span class="time"> 22:30 </span>
+				<div class="bottom_price"> 2500руб </div> 
+			</section>
+
+		</section>
+		
+	</section>
+
+	<section class="price_block">
+
+		<aside>
+			<span> 22 февраля </span>
+			<span> Вторник </span>
+		</aside>
+
+		<section class="time_block">
+		
+			<section class="price">
+				<span class="time"> 10:30 </span>
+				<span class="time"> 12:00 </span>
+				<span class="time"> 13:30 </span>
+				<span class="time"> 15:00 </span>
+				<span class="time"> 16:30 </span>
+				<div class="bottom_price"> 2000руб </div> 
+			</section>
+
+			<section class="price">
+				<span class="time"> 18:00 </span>
+				<span class="time"> 19:30 </span>
+				<span class="time"> 21:00 </span>
+				<span class="time"> 22:30 </span>
+				<div class="bottom_price"> 2500руб </div> 
+			</section>
+
+		</section>
+		
+	</section>
+
+	<section class="price_block">
+
+		<aside>
+			<span> 23 февраля </span>
+			<span> Среда </span>
+		</aside>
+
+		<section class="time_block">
+		
+			<section class="price">
+				<span class="time"> 10:30 </span>
+				<span class="time"> 12:00 </span>
+				<span class="time"> 13:30 </span>
+				<span class="time"> 15:00 </span>
+				<span class="time"> 16:30 </span>
+				<div class="bottom_price"> 2000руб </div> 
+			</section>
+
+			<section class="price">
+				<span class="time"> 18:00 </span>
+				<span class="time"> 19:30 </span>
+				<span class="time"> 21:00 </span>
+				<span class="time"> 22:30 </span>
+				<div class="bottom_price"> 2500руб </div> 
+			</section>
+
+		</section>
+		
+	</section>
+
+	<section class="price_block">
+
+		<aside>
+			<span> 24 февраля </span>
+			<span> Четверг</span>
+		</aside>
+
+		<section class="time_block">
+		
+			<section class="price">
+				<span class="time"> 10:30 </span>
+				<span class="time"> 12:00 </span>
+				<span class="time"> 13:30 </span>
+				<span class="time"> 15:00 </span>
+				<span class="time"> 16:30 </span>
+				<div class="bottom_price"> 2000руб </div> 
+			</section>
+
+			<section class="price">
+				<span class="time"> 18:00 </span>
+				<span class="time"> 19:30 </span>
+				<span class="time"> 21:00 </span>
+				<span class="time"> 22:30 </span>
+				<div class="bottom_price"> 2500руб </div> 
+			</section>
+
+		</section>
+		
+	</section>
+
+	<section class="price_block">
+
+		<aside>
+			<span> 25 февраля </span>
+			<span> Пятница </span>
+		</aside>
+
+		<section class="time_block">
+		
+			<section class="price">
+				<span class="time"> 10:30 </span>
+				<span class="time"> 12:00 </span>
+				<span class="time"> 13:30 </span>
+				<span class="time"> 15:00 </span>
+				<div class="bottom_price"> 2000руб </div> 
+			</section>
+
+			<section class="price">
+				<span class="time"> 16:30 </span>
+				<span class="time"> 18:00 </span>
+				<div class="bottom_price"> 2500руб </div> 
+			</section>
+
+			<section class="price">
+				<span class="time"> 19:30 </span>
+				<span class="time"> 21:00 </span>
+				<span class="time"> 22:30 </span>
+				<div class="bottom_price"> 3000руб </div> 
+			</section>
+
+		</section>
+		
+	</section>
+
+	<section class="price_block">
+
+		<aside>
+			<span> 26 ноября </span>
+			<span> Суббота </span>
+		</aside>
+
+		<section class="time_block">
+		
+			<section class="price">
+				<span class="time"> 10:30 </span>
+				<span class="time"> 12:00 </span>									
+				<div class="bottom_price"> 2500руб </div> 
+			</section>
+
+			<section class="price">
+				<span class="time"> 13:30 </span>
+				<span class="time"> 15:00 </span>
+				<span class="time"> 16:30 </span>
+				<span class="time"> 18:00 </span>
+				<span class="time"> 19:30 </span>
+				<span class="time"> 21:00 </span>
+				<span class="time"> 22:30 </span>
+				<div class="bottom_price"> 3000руб </div> 
+			</section>
+
+		</section>
+		
+	</section>
+
+	<section class="price_block">
+
+		<aside>
+			<span> 27 ноября </span>
+			<span> Воскресенье </span>
+		</aside>
+
+		<section class="time_block">
+		
+			<section class="price">
+				<span class="time"> 10:30 </span>
+				<span class="time"> 12:00 </span>									
+				<div class="bottom_price"> 2500руб </div> 
+			</section>
+
+			<section class="price">
+				<span class="time"> 13:30 </span>
+				<span class="time"> 15:00 </span>
+				<span class="time"> 16:30 </span>
+				<span class="time"> 18:00 </span>
+				<span class="time"> 19:30 </span>
+				<span class="time"> 21:00 </span>
+				<span class="time"> 22:30 </span>
+				<div class="bottom_price"> 3000руб </div> 
+			</section>
+
+		</section>
+		
+	</section>
+
+	<section class="price_block">
+
+		<aside>
+			<span> 28 февраля </span>
+			<span> Понедельник </span>
+		</aside>
+
+		<section class="time_block">
+		
+			<section class="price">
+				<span class="time"> 10:30 </span>
+				<span class="time"> 12:00 </span>
+				<span class="time"> 13:30 </span>
+				<span class="time"> 15:00 </span>
+				<span class="time"> 16:30 </span>
+				<div class="bottom_price"> 2000руб </div> 
+			</section>
+
+			<section class="price">
+				<span class="time"> 18:00 </span>
+				<span class="time"> 19:30 </span>
+				<span class="time"> 21:00 </span>
+				<span class="time"> 22:30 </span>
+				<div class="bottom_price"> 2500руб </div> 
+			</section>
+
+		</section>
+		
+	</section>
+
+	<section class="price_block">
+
+		<aside>
+			<span> 29 февраля </span>
+			<span> Вторник </span>
+		</aside>
+
+		<section class="time_block">
+		
+			<section class="price">
+				<span class="time"> 10:30 </span>
+				<span class="time"> 12:00 </span>
+				<span class="time"> 13:30 </span>
+				<span class="time"> 15:00 </span>
+				<span class="time"> 16:30 </span>
+				<div class="bottom_price"> 2000руб </div> 
+			</section>
+
+			<section class="price">
+				<span class="time"> 18:00 </span>
+				<span class="time"> 19:30 </span>
+				<span class="time"> 21:00 </span>
+				<span class="time"> 22:30 </span>
+				<div class="bottom_price"> 2500руб </div> 
+			</section>
+
+		</section>
+		
+	</section>
+
+
+
+
+</section>
+
+<a href="#top" class="to_top"> </a>
+
+<footer>
+
+	<nav>
+		
+		<a href="../../index.html"> <span> Главная </span> </a>
+
+		<a href="https://vk.com/topic-84011705_32212521"> <span> Отзывы </span> </a>
+
+		<a href="../gift/gift.html"> <span> Подарочный сертификат </span> </a>
+
+		<a href="../../index.html#about_quest"> <span> О квесте </span> </a>
+
+		<a href="../../index.html#contacts"> <span> Контакты </span> </a>
+
+		<a href="../franchise/franchise.html"> <span> Франшиза </span> </a>
+
+	</nav>
+
+	<span class="labirint"> &#xA9 2015 Лабиринт </span>
+
+</footer>
+
+</main>
 
 </body>
 </html>
