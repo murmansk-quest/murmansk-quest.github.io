@@ -1,3 +1,6 @@
+@import url(https://fonts.googleapis.com/css?family=Comfortaa:400,700&subset=latin,cyrillic);
+
+
 /* Basic */
 
 
@@ -73,7 +76,7 @@ header {
 }
 
 .description {
-	font-size: 1.3rem;
+	font-size: 1.2rem;
 	width: 55%;
 	position: absolute;
 	bottom: 35px;
@@ -82,6 +85,7 @@ header {
 	background-position: left center;
 	background-size: 140px auto;
 	padding-left: 170px;
+	font-family: 'Comfortaa', cursive;
 }
 
 h1 {
@@ -159,6 +163,7 @@ main h2 {
 	font-weight: 400;
 	margin-top: 25px;
 	text-align: center;
+	font-family: 'Comfortaa', cursive;
 }
 
 .date {
@@ -166,6 +171,7 @@ main h2 {
 	margin-top: 10px;
 	font-size: 1.3em;
 	text-align: center;
+	font-family: 'Comfortaa', cursive;
 }
 
 /* Main end */
@@ -190,12 +196,13 @@ main h2 {
 }
 
 .price_block aside {
-	width: 10%;
+	width: 12%;
 	float: left;
+	font-family: 'Comfortaa', cursive;
 }
 
 .time_block {
-	width: 91%;
+	width: 100%;
 }
 
 .price {

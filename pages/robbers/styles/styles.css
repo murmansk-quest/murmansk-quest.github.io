@@ -1,3 +1,6 @@
+@import url(https://fonts.googleapis.com/css?family=Comfortaa:400,700&subset=latin,cyrillic);
+
+
 /* Basic */
 
 
@@ -53,6 +56,8 @@ header {
 	background-size: 300px auto;
 	margin: 0.5em auto 0 auto;
 	padding-left: 10px;
+	-webkit-filter: drop-shadow(0 0 5px black) drop-shadow(0 0 5px black);
+	filter: drop-shadow(0 0 5px black) drop-shadow(0 0 5px black);
 }
 
 .logo h2 {
@@ -73,13 +78,16 @@ header {
 }
 
 .description {
-	font-size: 1.3rem;
+	font-size: 1.15rem;
 	width: 55%;
 	position: absolute;
 	bottom: 35px;
 	left: 3rem;
 	background-position: left center;
 	background-size: 140px auto;
+	-webkit-filter: drop-shadow(0 0 5px black) drop-shadow(0 0 5px black);
+	filter: drop-shadow(0 0 5px black) drop-shadow(0 0 5px black);
+	font-family: 'Comfortaa', cursive;
 }
 
 h1 {
@@ -107,6 +115,8 @@ header nav a {
 	padding-top: 40px;
 	background-position: top center;
 	font-size: 0.8em;
+	-webkit-filter: drop-shadow(0 0 5px black);
+	filter: drop-shadow(0 0 5px black);
 }
 
 /* background-position need in each(!) a */
@@ -157,6 +167,7 @@ main h2 {
 	font-weight: 400;
 	margin-top: 25px;
 	text-align: center;
+	font-family: 'Comfortaa', cursive;
 }
 
 .date {
@@ -164,6 +175,7 @@ main h2 {
 	margin-top: 10px;
 	font-size: 1.3em;
 	text-align: center;
+	font-family: 'Comfortaa', cursive;
 }
 
 /* Main end */
@@ -188,12 +200,13 @@ main h2 {
 }
 
 .price_block aside {
-	width: 10%;
+	width: 11%;
 	float: left;
+	font-family: 'Comfortaa', cursive;
 }
 
 .time_block {
-	width: 91%;
+	width: 100%;
 }
 
 .price {
@@ -257,11 +270,12 @@ footer {
 	padding-top: 5em;
 	padding-bottom: 4em;
 	position: relative;
+	font-family: 'Comfortaa', cursive;
 }
 
 footer nav a {
 	display: inline-block;
-	margin: 0 4em;
+	margin: 0 2.7em;
 	color: white;
 	border-bottom: 2px #f34c55 solid;
 	text-decoration: none;

@@ -1,3 +1,6 @@
+@import url(https://fonts.googleapis.com/css?family=Comfortaa:400,700&subset=latin,cyrillic);
+
+
 /* Basic */
 
 a {
@@ -31,7 +34,7 @@ body {
 header {
 	width: 100%;
 	color: white;
-	background: linear-gradient( to bottom, #261926, #c22e36) !important;\
+	background: linear-gradient( to bottom, #261926, #c22e36) !important;
 }
 
 .logo {
@@ -146,6 +149,8 @@ header nav a:nth-of-type(6) {
 .quests_block {
 	max-width: 80%;
 	margin: 0 auto;
+	font-size: 0.9em;
+	font-family: 'Comfortaa', cursive;
 }
 
 .top_quest,
@@ -230,9 +235,11 @@ main:before {
 
 main h2 {
 	text-align: center;
-	font-size: 3em;
+	font-size: 2em;
 	position: relative;
-	top: 3em;
+	top: 3.5em;
+	font-family: 'Comfortaa', cursive;
+	font-weight: 400;
 }
 
 main article {
@@ -300,6 +307,10 @@ main article:nth-of-type(3) p .inf_title  {
 	top: 0.5em;
 }
 
+.inf_description span:first-of-type {
+	font-family: 'Comfortaa', cursive;
+}
+
 .inf_description span {
 	position: absolute;
 	text-decoration: underline;
@@ -330,16 +341,18 @@ main article:nth-of-type(3) p .inf_title  {
 
 
 footer {
+	font-family: 'Comfortaa', cursive;
 	width: 100%;
 	background: url(images/triangle.png) repeat-x;
 	color: #2f2f2f;
 	position: relative;
+	font-family: 'Comfortaa', cursive;
 }
 
 footer h2 {
 	position: relative;
 	top: 1.5em;
-	font-size: 3em;
+	font-size: 2em;
 	text-align: center;
 }
 
@@ -350,7 +363,7 @@ footer h2 a {
 footer ul {
 	width: 100%;
 	position: relative;
-	top: 7em;
+	top: 6em;
 }
 
 footer li {
@@ -358,6 +371,7 @@ footer li {
 	margin-top: 0.3em;
 	margin-left: 3.5em;
 	list-style: none;
+	font-size: 1.5em;
 }
 
 footer li a {
@@ -455,9 +469,10 @@ footer li:nth-of-type(4):before {
 	width: 100%;
 	text-align: center;
 	color: white;
-	font-size: 2em;
+	font-size: 2.3em;
 	position: absolute;
 	top: -2.5em;
+	font-family: 'Comfortaa', cursive;
 }
 
 .schedule_header {
@@ -609,6 +624,7 @@ footer li:nth-of-type(4):before {
 	top: 170px;
 	z-index: 5;
 	font-size: 1em;
+	font-family: 'Comfortaa', cursive;
 }
 
 .schedule aside:nth-of-type(2) {
@@ -616,7 +632,7 @@ footer li:nth-of-type(4):before {
 }
 
 .schedule aside:nth-of-type(3) {
-	top: 430px;
+	top: 435px;
 }
 
 
@@ -634,7 +650,7 @@ footer li:nth-of-type(4):before {
 
 .schedule_footer {
 	width: 1195px;
-	height: 530px;
+	height: 550px;
 	background: white;
 	position: relative;
 	top: 3em;
@@ -749,6 +765,10 @@ footer li:nth-of-type(4):before {
 	z-index: 5;
 }
 
+.modal_block * {
+	font-family: 'Comfortaa', cursive;
+}
+
 .modal_window {
 	width: 300px;
 	height: 350px;
@@ -798,12 +818,12 @@ footer li:nth-of-type(4):before {
 }
 
 .book_this {
-	width: 150px;
+	width: 170px;
 	position: absolute;
 	bottom: 0;
 	left: 50%;
 	padding: 7px 10px;
-	margin: 0 0 30px -75px;
+	margin: 0 0 30px -86px;
 	background: white;
 	border: none;
 	font-size: 1.15em;
