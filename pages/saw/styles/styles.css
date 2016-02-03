@@ -1,5 +1,10 @@
 @import url(https://fonts.googleapis.com/css?family=Comfortaa:400,700&subset=latin,cyrillic);
-
+@font-face {
+    font-family: 'AleksandraC';
+    src: local('AleksandraCRegular'), url('fonts/aleksandracregular.woff2') format('woff2'), url('fonts/aleksandracregular.woff') format('woff'), url('fonts/aleksandracregular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
 
 /* Basic */
 
@@ -85,11 +90,13 @@ header {
 	background-position: left center;
 	background-size: 140px auto;
 	padding-left: 170px;
-	font-family: 'Comfortaa', cursive;
+	font-family: 'AleksandraC';
 }
 
 h1 {
 	font-weight: 400;
+	font-family: 'Comfortaa';
+	margin-bottom: 0.2em;
 }
 
 /* Header end */
@@ -157,13 +164,14 @@ main {
 	width: 100%;
 	background: linear-gradient(to bottom, #251926, #c22e36);
 	position: relative;
+	font-family: 'Comfortaa';
 }
 
 main h2 {
 	font-weight: 400;
 	margin-top: 25px;
 	text-align: center;
-	font-family: 'Comfortaa', cursive;
+	font-size: 1.7em;
 }
 
 .date {
@@ -171,7 +179,6 @@ main h2 {
 	margin-top: 10px;
 	font-size: 1.3em;
 	text-align: center;
-	font-family: 'Comfortaa', cursive;
 }
 
 /* Main end */
@@ -187,6 +194,7 @@ main h2 {
 	color: black;
 	padding: 1.7em 0 0.3em 0.9em;
 	font-size: 1.3em;
+	font-family: 'Comfortaa';
 }
 
 .price_block {
@@ -198,7 +206,6 @@ main h2 {
 .price_block aside {
 	width: 12%;
 	float: left;
-	font-family: 'Comfortaa', cursive;
 }
 
 .time_block {
@@ -250,7 +257,7 @@ main h2 {
 	background: url(images/small_circle.jpg) no-repeat;
 	background-size: 100% 100%;
 	top: 1.29em;
-	left: -0.33em;
+	left: -0.55em;
 	z-index: 5;
 }
 
@@ -266,11 +273,12 @@ footer {
 	padding-top: 5em;
 	padding-bottom: 4em;
 	position: relative;
+	font-family: 'Comfortaa';
 }
 
 footer nav a {
 	display: inline-block;
-	margin: 0 4em;
+	margin: 0 2.8em;
 	color: white;
 	border-bottom: 2px #f34c55 solid;
 	text-decoration: none;

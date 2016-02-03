@@ -1,4 +1,10 @@
 @import url(https://fonts.googleapis.com/css?family=Comfortaa:400,700&subset=latin,cyrillic);
+@font-face {
+    font-family: 'AleksandraC';
+    src: local('AleksandraCRegular'), url('fonts/aleksandracregular.woff2') format('woff2'), url('fonts/aleksandracregular.woff') format('woff'), url('fonts/aleksandracregular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
 
 
 /* Basic */
@@ -87,11 +93,13 @@ header {
 	background-size: 140px auto;
 	-webkit-filter: drop-shadow(0 0 5px black) drop-shadow(0 0 5px black);
 	filter: drop-shadow(0 0 5px black) drop-shadow(0 0 5px black);
-	font-family: 'Comfortaa', cursive;
+	font-family: 'AleksandraC';
 }
 
 h1 {
 	font-weight: 400;
+	font-family: 'Comfortaa';
+	margin-bottom: 0.2em;
 }
 
 /* Header end */
@@ -161,13 +169,13 @@ main {
 	width: 100%;
 	background: linear-gradient(to bottom, #251926, #c22e36);
 	position: relative;
+	font-family: 'Comfortaa';
 }
 
 main h2 {
 	font-weight: 400;
 	margin-top: 25px;
 	text-align: center;
-	font-family: 'Comfortaa', cursive;
 }
 
 .date {
@@ -175,7 +183,6 @@ main h2 {
 	margin-top: 10px;
 	font-size: 1.3em;
 	text-align: center;
-	font-family: 'Comfortaa', cursive;
 }
 
 /* Main end */
@@ -254,7 +261,7 @@ main h2 {
 	background: url(images/small_circle.jpg) no-repeat;
 	background-size: 100% 100%;
 	top: 1.29em;
-	left: -0.33em;
+	left: -0.55em;
 	z-index: 5;
 }
 
