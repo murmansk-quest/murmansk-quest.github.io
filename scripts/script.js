@@ -482,15 +482,19 @@ for( i = 0; i < time.length; i++ ) {
 	time[i].addEventListener("click", pickTime)
 }
 
-function pickTime() {
+var modal_cost;
+
+function pickTime(event) {
 	for( i = 0; i < time.length; i++ ) {
 		time[i].style.background = "transparent";
 	}
 	this.style.background = "#c22e36";
 	modal_block.style.display = "block";
-	setTimeout(function() {
+	setTimeout( function() {
 		modal_count = 1;
-	}, 300)
+	}, 300 );
+	target = event.target;
+	cost_footer.innerHTML = target.parentElement.getElementsByClassName("bottom_price")[0].innerHTML
 }
 
 
