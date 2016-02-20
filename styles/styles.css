@@ -772,7 +772,7 @@ footer li:nth-of-type(4):before {
 	background: rgba(0, 0, 0, 0.6);
 	position: fixed;
 	top: 0;
-	display: ;
+	display: none;
 	z-index: 5;
 }
 
@@ -948,7 +948,7 @@ address a {
 	right: 170px;
 }
 
-.book_modal input:focus {
+input:focus {
 	outline: none;
 }
 
