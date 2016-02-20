@@ -1,4 +1,5 @@
 @import url(https://fonts.googleapis.com/css?family=Comfortaa:400,700&subset=latin,cyrillic);
+
 @font-face {
     font-family: 'AleksandraC';
     src: local('AleksandraCRegular'), url('fonts/aleksandracregular.woff2') format('woff2'), url('fonts/aleksandracregular.woff') format('woff'), url('fonts/aleksandracregular.ttf') format('truetype');
@@ -7,8 +8,8 @@
 }
 
 
-
 /* Basic */
+
 
 a {
 	outline: none;
@@ -30,6 +31,7 @@ html {
 body {
 	overflow: hidden;
 }
+
 
 /* Basic end */
 
@@ -214,6 +216,7 @@ header nav a:nth-of-type(6) {
 .schedule {
 	clear: both;
 }
+
 
 /* Quest block end */
 
@@ -769,7 +772,7 @@ footer li:nth-of-type(4):before {
 	background: rgba(0, 0, 0, 0.6);
 	position: fixed;
 	top: 0;
-	display: none;
+	display: ;
 	z-index: 5;
 }
 
@@ -778,67 +781,279 @@ footer li:nth-of-type(4):before {
 }
 
 .modal_window {
-	width: 300px;
-	height: 350px;
+	width: 1053px;
+	height: 321px;
 	background: #993333;
 	color: white;
 	position: absolute;
 	left: 50%;
 	top: 50%;
-	margin: -175px 0 0 -150px;
+	margin: -158.5px 0 0 -524.5px;
+	box-sizing: border-box;
+	border: 3px white solid;
+	border-radius: 5px;
+	text-shadow: 0 0 3px black, 0 0 3px black;
 }
 
-.modal_window span {
-	display: inline-block;
-	background: #1c1c1c;
-	padding: 5px 12px;
-	margin: 0 auto;
-	margin-right: 7px;
-	text-align: center;
-}
+/* Left aside */
 
-.date_block {
-	width: 100%;
-	text-align: center;
-	margin: 15px 0;
+.left_aside {
+	width: 50%;
+	height: 100%;
+	background: url(images/modal/border.png) no-repeat, url(images/wizard.jpg) no-repeat;
+	background-size: auto 100%, 100% auto;
+	background-position: right, 0;
+	float: left;
 }
 
 .quest_name {
-	display: block !important;
-	width: 100px;
+	width: 100%;
 	margin: 0 auto !important;
+	text-align: left;
+	padding: 30px 0 0 36px;
+	font-size: 21px;
+}
+
+.modal_description {
+	margin-top: 4.3em;
+	padding: 10px 0 0 109px;
+	background: url(images/modal/food.png) no-repeat 15px 5px;
+	background-size: auto 85px;
+	text-shadow: 0 0 3px black, 0 0 3px black, 0 0 3px black;
+}
+
+.recomendation {
+	position: relative;
+}
+
+.recomendation:after {
+	content: "";
+	width: 153px;
+	height: 1px;
+	background: white;
+	position: absolute;
+	left: 0;
+	top: 23px;
+}
+
+.left_aside address {
+	position: absolute;
+	left: 25px;
+	bottom: 5px;
+}
+
+address * {
+	padding-left: 30px;
+	display: block;
+	min-height: 25px;
+	text-decoration: none;
+}
+
+address a {
+	background: url(images/modal/tel.png) no-repeat 0 2px;
+	background-size: auto 80%;
+	margin-bottom: 3px;
+}
+
+.address_pos {
+	background: url(images/modal/geo.png) no-repeat 0 2px;
+	background-size: auto 80%;
+}
+
+/* Right aside */
+
+.right_aside {
+	width: 50%;
+	height: 100%;
+	background: #190915;
+	float: right;
+}
+
+.time_block {
+	margin: 1em 0 0 2em;
+	float: left;
+}
+
+.right_aside h3 {
+	font-size: 1.2em;
 }
 
 .input_block {
-	position: relative;
-	top: 30px;	
+	margin: 1.4em 1em 0 0;
+	float: right;
 }
 
-.modal_block input {
-	margin: 15px auto 0 auto;
+.input_block form * {
+	width: 15em;
+	min-height: 2em;
 	display: block;
-	border: none;
-	padding: 5px 10px;
+	margin-bottom: 1em;
+	border: 1px white solid;
+	border-radius: 7%/50%;
+	background: none;
+	color: white;
+	padding-left: 1em;
 }
 
-.modal_block input:focus {
-	outline: 2px black solid;
+.cost {
+	clear: both;
+	display: block;
+	padding: 0 0 0 2.7em;
 }
 
-.book_this {
-	width: 170px;
+.cost div {
+	padding: 0.3em 0 0 1.5em;
+}
+
+
+/* Slider */
+
+.slider {
+	width: 200px;
 	position: absolute;
-	bottom: 0;
-	left: 50%;
-	padding: 7px 10px;
-	margin: 0 0 30px -86px;
-	background: white;
-	border: none;
-	font-size: 1.15em;
+	right: 25px;
 }
 
-.book_this:focus {
-	outline: 2px black solid;
+.slider_track {
+	text-align: center;
+}
+
+.slider_track h2 {
+	margin: -3em 0 1em 0;
+	font-size: 0.89em;
+}
+
+.result_slider {
+	margin: -0.5em 0 0 0;
+}
+
+.inp_range {
+	position: relative;
+	left: -10px;
+}
+
+.book_modal {
+	width: 240px;
+	height: 27px;
+	box-sizing: border-box;
+	display: block;
+	text-align: center;
+	background: #2b1227;
+	border: 1px white solid;
+	border-radius: 5%/50%;
+	color: white;
+	cursor: pointer;
+	position: absolute;
+	bottom: 12px;
+	right: 170px;
+}
+
+.book_modal input:focus {
+	outline: none;
+}
+
+input[type=range] {
+  -webkit-appearance: none; /* Hides the slider so that custom slider can be made */
+  width: 100%; /* Specific width is required for Firefox. */
+  margin-left: 10px;
+}
+
+input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+}
+
+input[type=range]:focus {
+  outline: none; /* Removes the blue border. You should probably do some kind of focus styling for accessibility reasons though. */
+}
+
+input[type=range]::-ms-track {
+  width: 100%;
+  cursor: pointer;
+  background: transparent; /* Hides the slider so custom styles can be added */
+  border-color: transparent;
+  color: transparent;
+}
+
+/* Circle */
+
+input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  border: none;
+  height: 18px;
+  width: 18px;
+  border-radius: 50%;
+  background: #4c2446;
+  cursor: pointer;
+  margin-top: -7px; /* You need to specify a margin in Chrome, but in Firefox and IE it is automatic */
+}
+
+input[type=range]::-moz-range-thumb {
+  border: none;
+  height: 18px;
+  width: 18px;
+  border-radius: 50%;
+  background: #4c2446;
+  cursor: pointer;
+}
+
+input[type=range]::-ms-thumb {
+  border: none;
+  height: 18px;
+  width: 18px;
+  border-radius: 50%;
+  background: #4c2446;
+  cursor: pointer;
+}
+
+/* Track */
+
+input[type=range]::-webkit-slider-runnable-track {
+	box-shadow: 0 0 1px #2a1325, 0px 0px 1px #2a1325;
+  	width: 100%;
+ 	height: 5px;
+ 	cursor: pointer;
+ 	background: #2a1325;
+ 	border-radius: 1.3px;
+}
+
+input[type=range]:focus::-webkit-slider-runnable-track {
+  background: #2a1325;
+  box-shadow: 0 0 1px #2a1325, 0px 0px 1px #2a1325;
+}
+
+input[type=range]::-moz-range-track {
+  width: 100%;
+  height: 5px;
+  cursor: pointer;
+  background: #2a1325;
+  border-radius: 1.3px;
+}
+
+input[type=range]::-ms-track {
+  width: 100%;
+  height: 5px;
+  cursor: pointer;
+  background: transparent;
+  border-color: transparent;
+  color: transparent;
+}
+
+input[type=range]::-ms-fill-lower {
+  background: #2a1325;
+  border-radius: 2.6px;
+}
+
+input[type=range]:focus::-ms-fill-lower {
+  background: #2a1325;
+}
+
+input[type=range]::-ms-fill-upper {
+  background: #2a1325;
+  border-radius: 2.6px;
+}
+
+input[type=range]:focus::-ms-fill-upper {
+  background: #2a1325;
 }
 
 

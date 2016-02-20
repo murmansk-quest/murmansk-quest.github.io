@@ -599,4 +599,13 @@ var month_in_modal = document.getElementById("month_in_modal");
 month_in_modal.innerHTML = set_month;
 
 
+// Slider
+
+var p = document.getElementById("amount"),
+    res = document.getElementById("result");
+
+p.addEventListener("input", function() {
+    res.innerHTML = p.value;
+}, false); 
+
 /* Modal window end */
