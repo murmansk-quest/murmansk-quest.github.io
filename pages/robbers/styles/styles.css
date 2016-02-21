@@ -306,3 +306,317 @@ footer .labirint {
 }
 
 /* Footer end */
+
+
+
+/* Booking */
+
+.time {
+	transition: all 0.7s;
+	cursor: pointer;
+}
+
+.time:hover {
+	background: #C5232B;
+}
+
+/* Booking end */
+
+
+
+/* Modal window */
+
+
+.modal_block {
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, 0.6);
+	position: fixed;
+	display: none;
+	top: 0;
+	display: ;
+	z-index: 5;
+}
+
+.modal_block * {
+	font-family: 'Comfortaa', cursive;
+}
+
+.modal_window {
+	width: 1053px;
+	height: 321px;
+	background: #993333;
+	color: white;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	margin: -158.5px 0 0 -524.5px;
+	box-sizing: border-box;
+	border: 3px white solid;
+	border-radius: 5px;
+	text-shadow: 0 0 3px black, 0 0 3px black;
+}
+
+/* Left aside */
+
+.left_aside {
+	width: 50%;
+	height: 100%;
+	background: url(images/modal/border.png) no-repeat, url(images/wizard.jpg) no-repeat;
+	background-size: auto 100%, 100% auto;
+	background-position: right, 0;
+	float: left;
+}
+
+.quest_name {
+	width: 100%;
+	margin: 0 auto !important;
+	text-align: left;
+	padding: 30px 0 0 36px;
+	font-size: 21px;
+}
+
+.modal_description {
+	margin-top: 4.3em;
+	padding: 10px 0 0 109px;
+	background: url(images/modal/food.png) no-repeat 15px 5px;
+	background-size: auto 85px;
+	text-shadow: 0 0 3px black, 0 0 3px black, 0 0 3px black;
+}
+
+.recomendation {
+	position: relative;
+}
+
+.recomendation:after {
+	content: "";
+	width: 153px;
+	height: 1px;
+	background: white;
+	position: absolute;
+	left: 0;
+	top: 23px;
+}
+
+.left_aside address {
+	position: absolute;
+	left: 25px;
+	bottom: 5px;
+}
+
+address * {
+	padding-left: 30px;
+	display: block;
+	min-height: 25px;
+	text-decoration: none;
+}
+
+address a {
+	background: url(images/modal/tel.png) no-repeat 0 2px;
+	background-size: auto 80%;
+	margin-bottom: 3px;
+}
+
+.address_pos {
+	background: url(images/modal/geo.png) no-repeat 0 2px;
+	background-size: auto 80%;
+}
+
+/* Right aside */
+
+.right_aside {
+	width: 50%;
+	height: 100%;
+	background: #190915;
+	float: right;
+}
+
+.time_block_modal {
+	margin: 1em 0 0 2em;
+	float: left;
+}
+
+.right_aside h3 {
+	font-size: 1.2em;
+}
+
+.input_block {
+	margin: 1.4em 1em 0 0;
+	float: right;
+}
+
+.input_block form * {
+	width: 15em;
+	min-height: 2em;
+	display: block;
+	margin-bottom: 1em;
+	border: 1px white solid;
+	border-radius: 7%/50%;
+	background: none;
+	color: white;
+	padding-left: 1em;
+}
+
+.cost {
+	clear: both;
+	display: block;
+	padding: 0 0 0 2.7em;
+}
+
+.cost div {
+	padding: 0.3em 0 0 1.5em;
+}
+
+
+/* Slider */
+
+.slider {
+	width: 200px;
+	position: absolute;
+	right: 25px;
+}
+
+.slider_track {
+	text-align: center;
+}
+
+.slider_track h2 {
+	margin: -3em 0 1em 0;
+	font-size: 0.89em;
+}
+
+.result_slider {
+	margin: -0.5em 0 0 0;
+}
+
+.inp_range {
+	position: relative;
+	left: -10px;
+}
+
+.book_modal {
+	width: 240px;
+	height: 27px;
+	box-sizing: border-box;
+	display: block;
+	text-align: center;
+	background: #2b1227;
+	border: 1px white solid;
+	border-radius: 5%/50%;
+	color: white;
+	cursor: pointer;
+	position: absolute;
+	bottom: 12px;
+	right: 170px;
+}
+
+input:focus {
+	outline: none;
+}
+
+input[type=range] {
+  -webkit-appearance: none; /* Hides the slider so that custom slider can be made */
+  width: 100%; /* Specific width is required for Firefox. */
+  margin-left: 10px;
+}
+
+input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+}
+
+input[type=range]:focus {
+  outline: none; /* Removes the blue border. You should probably do some kind of focus styling for accessibility reasons though. */
+}
+
+input[type=range]::-ms-track {
+  width: 100%;
+  cursor: pointer;
+  background: transparent; /* Hides the slider so custom styles can be added */
+  border-color: transparent;
+  color: transparent;
+}
+
+/* Circle */
+
+input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  border: none;
+  height: 18px;
+  width: 18px;
+  border-radius: 50%;
+  background: #4c2446;
+  cursor: pointer;
+  margin-top: -7px; /* You need to specify a margin in Chrome, but in Firefox and IE it is automatic */
+}
+
+input[type=range]::-moz-range-thumb {
+  border: none;
+  height: 18px;
+  width: 18px;
+  border-radius: 50%;
+  background: #4c2446;
+  cursor: pointer;
+}
+
+input[type=range]::-ms-thumb {
+  border: none;
+  height: 18px;
+  width: 18px;
+  border-radius: 50%;
+  background: #4c2446;
+  cursor: pointer;
+}
+
+/* Track */
+
+input[type=range]::-webkit-slider-runnable-track {
+	box-shadow: 0 0 1px #2a1325, 0px 0px 1px #2a1325;
+  	width: 100%;
+ 	height: 5px;
+ 	cursor: pointer;
+ 	background: #2a1325;
+ 	border-radius: 1.3px;
+}
+
+input[type=range]:focus::-webkit-slider-runnable-track {
+  background: #2a1325;
+  box-shadow: 0 0 1px #2a1325, 0px 0px 1px #2a1325;
+}
+
+input[type=range]::-moz-range-track {
+  width: 100%;
+  height: 5px;
+  cursor: pointer;
+  background: #2a1325;
+  border-radius: 1.3px;
+}
+
+input[type=range]::-ms-track {
+  width: 100%;
+  height: 5px;
+  cursor: pointer;
+  background: transparent;
+  border-color: transparent;
+  color: transparent;
+}
+
+input[type=range]::-ms-fill-lower {
+  background: #2a1325;
+  border-radius: 2.6px;
+}
+
+input[type=range]:focus::-ms-fill-lower {
+  background: #2a1325;
+}
+
+input[type=range]::-ms-fill-upper {
+  background: #2a1325;
+  border-radius: 2.6px;
+}
+
+input[type=range]:focus::-ms-fill-upper {
+  background: #2a1325;
+}
+
+
+/* Modal window end */
