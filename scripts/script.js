@@ -576,6 +576,7 @@ var selected_time = "10:00";
 var time_in_modal = document.getElementById("selected_time");
 var quest_name_modal = document.getElementById("quest_name_modal");
 time_in_modal.innerHTML = selected_time;
+var left_aside_modal = document.getElementById("left_aside_modal");
 
 for( i = 0; i < time.length; i++ ) {
 	time[i].addEventListener("click", getTime)
@@ -586,12 +587,21 @@ function getTime(event) {
 	time_in_modal.innerHTML = target.innerHTML;
 	if( target.parentNode.parentNode.classList.contains("price_block_1") ) {
 		quest_name_modal.innerHTML = quest_one;
+		left_aside_modal.classList.remove("quest_two_modal");
+		left_aside_modal.classList.remove("quest_tree_modal");
+		left_aside_modal.classList.add("quest_one_modal");
 	}
 	if( target.parentNode.parentNode.classList.contains("price_block_2") ) {
 		quest_name_modal.innerHTML = quest_two;
+		left_aside_modal.classList.remove("quest_one_modal");
+		left_aside_modal.classList.remove("quest_tree_modal");
+		left_aside_modal.classList.add("quest_two_modal");
 	}
 	if( target.parentNode.parentNode.classList.contains("price_block_3") ) {
 		quest_name_modal.innerHTML = quest_tree;
+		left_aside_modal.classList.remove("quest_one_modal");
+		left_aside_modal.classList.remove("quest_two_modal");
+		left_aside_modal.classList.add("quest_tree_modal");
 	}
 }
 
