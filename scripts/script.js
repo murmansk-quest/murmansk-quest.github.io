@@ -577,6 +577,7 @@ var time_in_modal = document.getElementById("selected_time");
 var quest_name_modal = document.getElementById("quest_name_modal");
 time_in_modal.innerHTML = selected_time;
 var left_aside_modal = document.getElementById("left_aside_modal");
+var modal_description = document.getElementById("modal_description")
 
 for( i = 0; i < time.length; i++ ) {
 	time[i].addEventListener("click", getTime)
@@ -590,18 +591,21 @@ function getTime(event) {
 		left_aside_modal.classList.remove("quest_two_modal");
 		left_aside_modal.classList.remove("quest_tree_modal");
 		left_aside_modal.classList.add("quest_one_modal");
+		modal_description.innerHTML = "Описание квеста \" Пила \" ";
 	}
 	if( target.parentNode.parentNode.classList.contains("price_block_2") ) {
 		quest_name_modal.innerHTML = quest_two;
 		left_aside_modal.classList.remove("quest_one_modal");
 		left_aside_modal.classList.remove("quest_tree_modal");
 		left_aside_modal.classList.add("quest_two_modal");
+		modal_description.innerHTML = "Описание квеста \" Грабители \" ";
 	}
 	if( target.parentNode.parentNode.classList.contains("price_block_3") ) {
 		quest_name_modal.innerHTML = quest_tree;
 		left_aside_modal.classList.remove("quest_one_modal");
 		left_aside_modal.classList.remove("quest_two_modal");
 		left_aside_modal.classList.add("quest_tree_modal");
+		modal_description.innerHTML = "Старый маг не справился и ценой своей жизни запечатал помещение, дабы чудовищный дух не вырвался на свободу. ";
 	}
 }
 

@@ -807,15 +807,17 @@ footer li:nth-of-type(4):before {
 	font-size: 2.3em;
 }
 
-.modal_window:after {
-	content: "";
+.close_icon {
 	width: 35px;
 	height: 35px;
 	background: url(images/remove-button.png) no-repeat;
 	background-size: 100% 100%;
 	position: absolute;
-	right: -40px;
-	top: -40px;
+	right: 50%;
+	top: 50%;
+	z-index: 10;
+	margin: -190px -570px 0 0;
+	cursor: pointer;
 }
 
 /* Left aside */
