@@ -599,6 +599,8 @@ function getTime(event) {
 		left_aside_modal.classList.remove("quest_tree_modal");
 		left_aside_modal.classList.add("quest_two_modal");
 		modal_description.innerHTML = "Описание квеста \" Грабители \" ";
+		modal_description_container.classList.add("modal_description_robbers");
+		
 	}
 	if( target.parentNode.parentNode.classList.contains("price_block_3") ) {
 		quest_name_modal.innerHTML = quest_tree;
