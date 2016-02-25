@@ -859,6 +859,9 @@ footer li:nth-of-type(4):before {
 	min-height: 95px;
 	margin-top: 4.3em;
 	padding: 10px 0 0 109px;
+}
+
+.modal_description_wizard {
 	background: url(images/modal/food.png) no-repeat 15px 5px;
 	background-size: auto 85px;
 }
@@ -867,7 +870,6 @@ footer li:nth-of-type(4):before {
 	background: url(images/modal/money.png) no-repeat 15px 5px;
 	background-size: auto 85px;
 }
-
 
 .recomendation {
 	position: relative;
