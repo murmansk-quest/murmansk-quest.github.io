@@ -328,7 +328,7 @@ footer .labirint {
 .modal_block {
 	width: 100%;
 	height: 100%;
-	background: rgba(0, 0, 0, 0.6);
+	background: rgba(0, 0, 0, 0.93);
 	position: fixed;
 	display: none;
 	top: 0;
@@ -375,11 +375,26 @@ footer .labirint {
 }
 
 .modal_description {
+	width: 390px;
+	min-height: 95px;
 	margin-top: 4.3em;
 	padding: 10px 0 0 109px;
 	background: url(images/modal/food.png) no-repeat 15px 5px;
 	background-size: auto 85px;
 	text-shadow: 0 0 3px black, 0 0 3px black, 0 0 3px black;
+}
+
+.close_icon {
+	width: 35px;
+	height: 35px;
+	background: url(images/remove-button.png) no-repeat;
+	background-size: 100% 100%;
+	position: absolute;
+	right: 50%;
+	top: 50%;
+	z-index: 10;
+	margin: -190px -570px 0 0;
+	cursor: pointer;
 }
 
 .recomendation {
@@ -400,6 +415,7 @@ footer .labirint {
 	position: absolute;
 	left: 25px;
 	bottom: 5px;
+	font-style: normal;
 }
 
 address * {
