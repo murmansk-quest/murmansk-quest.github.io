@@ -362,8 +362,8 @@ footer .labirint {
 .left_aside {
 	width: 50%;
 	height: 100%;
-	background: url(images/modal/border.png) no-repeat, url(images/wizard.jpg) no-repeat;
-	background-size: auto 100%, 100% auto;
+	background: url(images/modal/border.png) no-repeat, url(images/bg_header_min.jpg) no-repeat;
+	background-size: auto 100%, auto 100%;
 	background-position: right, 0;
 	float: left;
 }
@@ -523,6 +523,11 @@ address a {
 	position: absolute;
 	bottom: 12px;
 	right: 170px;
+	transition: all 0.5s;
+}
+
+.book_modal:hover {
+	background: #4c2446;
 }
 
 input:focus {

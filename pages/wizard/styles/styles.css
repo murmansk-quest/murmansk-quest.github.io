@@ -519,6 +519,11 @@ address a {
 	position: absolute;
 	bottom: 12px;
 	right: 170px;
+	transition: all 0.5s;
+}
+
+.book_modal:hover {
+	background: #4c2446;
 }
 
 input:focus {
