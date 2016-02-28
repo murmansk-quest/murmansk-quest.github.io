@@ -176,6 +176,7 @@ header nav a:nth-of-type(6) {
 	width: 49%;
 	background-repeat: no-repeat;
 	background-size: 100% 100%;
+	position: relative;
 }
 
 .left_article {
@@ -215,6 +216,57 @@ header nav a:nth-of-type(6) {
 
 .schedule {
 	clear: both;
+}
+
+/* Quest description */
+
+.header_description_container {
+	width: 100%;
+	height: 100%;
+	border: 1px white solid;
+	position: absolute;
+	bottom: 0;
+	z-index: 0;
+}
+
+.header_quest_description {
+	height: 70px;
+	background: url(images/saw.png) no-repeat;
+	background-size: 70px auto;
+	position: absolute;
+	left: 7%;
+	bottom: 35%;
+	padding-left: 85px;
+}
+
+.header_quest_contacts {
+	position: absolute;
+	left: 7%;
+	bottom: 7%;
+}
+
+.quests_block a:first-of-type {
+	width: 100%;
+	height: 100%;
+	background: none;
+	z-index: 10;
+	display: block;
+}
+
+.header_quest_contacts a {
+	background: url(images/modal/tel.png) no-repeat 0 2px;
+	background-size: auto 80%;
+	margin-bottom: 3px;
+}
+
+.header_quest_contacts .address_pos {
+	background: url(images/modal/geo.png) no-repeat 0 2px;
+	background-size: auto 80%;
+}
+
+.header_recomendation {
+	display: inline-block;
+	border-bottom: 1px white solid;
 }
 
 
