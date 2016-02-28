@@ -62,8 +62,6 @@ header {
 	background-size: 300px auto;
 	margin: 0.5em auto 0 auto;
 	padding-left: 10px;
-	-webkit-filter: drop-shadow(0 0 5px black) drop-shadow(0 0 5px black);
-	filter: drop-shadow(0 0 5px black) drop-shadow(0 0 5px black);
 }
 
 .logo h2 {
@@ -92,8 +90,6 @@ header {
 	background: url(images/money.png) no-repeat;
 	background-position: left center;
 	background-size: 140px auto;
-	-webkit-filter: drop-shadow(0 0 5px black) drop-shadow(0 0 5px black);
-	filter: drop-shadow(0 0 5px black) drop-shadow(0 0 5px black);
 	font-family: 'AleksandraC';
 	padding-left: 170px;
 }
@@ -125,8 +121,6 @@ header nav a {
 	padding-top: 40px;
 	background-position: top center;
 	font-size: 0.8em;
-	-webkit-filter: drop-shadow(0 0 5px black);
-	filter: drop-shadow(0 0 5px black);
 }
 
 /* background-position need in each(!) a */

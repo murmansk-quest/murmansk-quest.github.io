@@ -303,6 +303,14 @@
 	header {
 		height: 1500px;
 	}
+	.header_quest_description {
+		height: 70px;
+		background: none !important;
+		position: absolute;
+		left: 7%;
+		bottom: 35%;
+		padding-left: 0;
+	}
 }
 
 @media all and (max-width: 400px) {

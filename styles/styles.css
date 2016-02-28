@@ -238,6 +238,16 @@ header nav a:nth-of-type(6) {
 	padding-left: 85px;
 }
 
+.wizard .header_quest_description {
+	background: url(images/modal/food.png) no-repeat;
+	background-size: 70px auto;
+}
+
+.robbers .header_quest_description {
+	background: url(images/modal/money.png) no-repeat;
+	background-size: 70px auto;
+}
+
 .header_quest_contacts {
 	position: absolute;
 	left: 7%;
