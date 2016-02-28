@@ -477,24 +477,28 @@ var time = document.getElementsByClassName("time");
 var modal_block = document.getElementById("modal_block");
 var modal_window = document.getElementById("modal_window");
 var modal_count = 0;
+var modal_cost;
+var blur_css = 0;
 
 for( i = 0; i < time.length; i++ ) {
 	time[i].addEventListener("click", pickTime)
 }
 
-var modal_cost;
-
 function pickTime(event) {
 	for( i = 0; i < time.length; i++ ) {
 		time[i].style.background = "transparent";
 	}
-	this.style.background = "#c22e36";
+	this.style.background = "`#c22e36";
 	modal_block.style.display = "block";
 	setTimeout( function() {
 		modal_count = 1;
 	}, 300 );
 	target = event.target;
-	cost_footer.innerHTML = target.parentElement.getElementsByClassName("bottom_price")[0].innerHTML
+	cost_footer.innerHTML = target.parentElement.getElementsByClassName("bottom_price")[0].innerHTML;
+	var all = document.querySelectorAll("header, main")
+	for( i = 0; i < all.length; i++ ) {
+		all[i].style.webkitFilter = "blur(2px)";
+	}
 }
 
 
@@ -524,6 +528,10 @@ function closeModal(event) {
 	if( !target.classList.contains("modal") && modal_count == 1 ) {
 		modal_block.style.display = "none";
 		modal_count = 0;
+		var all = document.querySelectorAll("header, main");
+		for( i = 0; i < all.length; i++ ) {
+			all[i].style.webkitFilter = "blur(0)";
+		}
 	}
 }
 

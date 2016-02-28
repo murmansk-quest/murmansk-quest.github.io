@@ -7,6 +7,10 @@ function closeModal(event) {
 	if( !target.classList.contains("modal") && modal_count == 1 ) {
 		modal_block.style.display = "none";
 		modal_count = 0;
+		var all = document.querySelectorAll("header, main")
+		for( i = 0; i < all.length; i++ ) {
+			all[i].style.webkitFilter = "blur(0)";
+		}
 	}
 }
 
@@ -38,6 +42,10 @@ function pickTime(event) {
 	cost_footer.innerHTML = target.parentElement.getElementsByClassName("bottom_price")[0].innerHTML;
 	selected_date.innerHTML = target.parentElement.parentElement.parentElement.getElementsByClassName("date_schedule")[0].innerHTML;
 	selected_time.innerHTML = target.innerHTML;
+	var all = document.querySelectorAll("header, main")
+	for( i = 0; i < all.length; i++ ) {
+		all[i].style.webkitFilter = "blur(2px)";
+	}
 }
 
 // Slider
