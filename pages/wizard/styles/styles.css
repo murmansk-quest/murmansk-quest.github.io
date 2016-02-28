@@ -90,9 +90,11 @@ header {
 	position: absolute;
 	bottom: 35px;
 	left: 3rem;
+	background: url(images/modal/food.png) no-repeat;
 	background-position: left center;
 	background-size: 140px auto;
 	font-family: 'AleksandraC';
+	padding-left: 170px;
 }
 
 h1 {
