@@ -829,7 +829,7 @@ footer li:nth-of-type(4):before {
 	top: 0;
 	display: none;
 	z-index: 5;
-	background: rgba(0, 0, 0, 0.7);
+	background: rgba(0, 0, 0, 0.8);
 }
 
 .modal_block * {
