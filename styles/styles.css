@@ -871,6 +871,11 @@ footer li:nth-of-type(4):before {
 	background-size: auto 85px;
 }
 
+.modal_description_saw {
+	background: url(images/modal/saw.png) no-repeat 15px 5px;
+	background-size: auto 85px;
+}
+
 .recomendation {
 	position: relative;
 }

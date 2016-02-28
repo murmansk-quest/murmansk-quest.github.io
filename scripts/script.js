@@ -592,6 +592,9 @@ function getTime(event) {
 		left_aside_modal.classList.remove("quest_tree_modal");
 		left_aside_modal.classList.add("quest_one_modal");
 		modal_description.innerHTML = "Описание квеста \" Пила \" ";
+		modal_description_container.classList.remove("modal_description_robbers");
+		modal_description_container.classList.remove("modal_description_wizard");
+		modal_description_container.classList.add("modal_description_saw");
 	}
 	if( target.parentNode.parentNode.classList.contains("price_block_2") ) {
 		quest_name_modal.innerHTML = quest_two;
@@ -600,6 +603,7 @@ function getTime(event) {
 		left_aside_modal.classList.add("quest_two_modal");
 		modal_description.innerHTML = "Описание квеста \" Грабители \" ";
 		modal_description_container.classList.remove("modal_description_wizard");
+		modal_description_container.classList.remove("modal_description_saw");
 		modal_description_container.classList.add("modal_description_robbers");
 
 	}
@@ -610,6 +614,7 @@ function getTime(event) {
 		left_aside_modal.classList.add("quest_tree_modal");
 		modal_description.innerHTML = "Старый маг не справился и ценой своей жизни запечатал помещение, дабы чудовищный дух не вырвался на свободу. ";
 		modal_description_container.classList.remove("modal_description_robbers");
+		modal_description_container.classList.remove("modal_description_saw");
 		modal_description_container.classList.add("modal_description_wizard");
 	}
 }
