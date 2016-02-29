@@ -31,9 +31,9 @@ for( i = 0; i < time.length; i++ ) {
 
 function pickTime(event) {
 	for( i = 0; i < time.length; i++ ) {
-		time[i].style.background = "transparent";
+		time[i].style.color = "black";
 	}
-	this.style.background = "#c22e36";
+	this.style.color = "#c22e36";
 	modal_block.style.display = "block";
 	setTimeout( function() {
 		modal_count = 1;
