@@ -59,7 +59,7 @@
 		display: none;
 	}
 	header {
-		height: 1000px;
+		min-height: 1150px;
 	}
 }
 
@@ -92,7 +92,6 @@
 		margin: 0 auto;
 		top: 0 !important;
 	}
-
 	.right_article {
 		float: none;
 		margin: 0 auto;
@@ -103,6 +102,10 @@
 	}
 	.bottom_quest {
 		top: 0;
+	}
+	.third_quests {
+		position: relative;
+		top: 0
 	}
 	.present {
 		display: inline-block;
@@ -132,15 +135,20 @@
 		margin-left: 0;
 		float: none;
 	}
-	header {
-		height: 1700px;
-	}
 	main h2 {
 		text-align: center;
 		font-size: 3em;
 		position: relative;
 		top: 1em;
 		margin-bottom: -2em;
+	}
+	.quests_block article h2 {
+		padding: 0;
+		background: none;
+	}
+	header {
+		margin-bottom: -3em;
+		padding-bottom: 5em;
 	}
 }
 
@@ -193,9 +201,6 @@
 	.quests_block {
 		max-width: 100%;
 	}
-	header {
-		height: 2000px;
-	}
 }
 
 @media all and (max-width: 600px) {
@@ -234,9 +239,6 @@
 		top: 0;
 		left: 0;
 		margin-bottom: 0;
-	}
-	header {
-		height: 1800px;
 	}
 }
 
@@ -294,15 +296,10 @@
 		list-style: none;
 		text-align: left;
 	}
-	header {
-		height: 1600px;
-	}
 }
 
 @media all and (max-width: 480px) {
-	header {
-		height: 1500px;
-	}
+	
 	.header_quest_description {
 		height: 70px;
 		background: none !important;
@@ -318,15 +315,10 @@
 		width: 100%;
 		height: 50px;
 	}
-	header {
-		height: 1600px;
-	}
 }
 
 @media all and (max-width: 420px) {
-	header {
-		height: 1350px;
-	}
+	
 }
 
 @media all and (max-width: 385px) {
@@ -372,14 +364,9 @@
 		height: 50px;
 		font-size: 0.9em;
 	}
-	header {
-		height: 1200px;
-	}
 }
 
 @media all and (max-width: 320px) {
-	header {
-		height: 1150px;
-	}
+	
 }
 
