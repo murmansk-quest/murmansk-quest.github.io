@@ -172,6 +172,11 @@ header nav a:nth-of-type(6) {
 	top: 1.5em;
 }
 
+.third_quests {
+	position: relative;
+	top: 45px;
+}
+
 .quests_block article {
 	width: 49%;
 	background-repeat: no-repeat;
@@ -203,80 +208,77 @@ header nav a:nth-of-type(6) {
 	background: url(images/gift.jpg) no-repeat;
 }
 
-.quests_block h2 {
-	font-size: 1.7em;
-	position: relative;
-	left: 1.5em;
-	top: 1em;
+.ship {
+	background: url(images/Korabl_-_prizrak.jpg) no-repeat;
+}
+
+.hobbit {
+	background: url(images/Khobbit.jpg) no-repeat;
 }
 
 .quests_block h2 {
-	text-shadow: 1px 1px 5px #361b28, -1px -1px 5px #361b28;
+	font-size: 1.7em;
+	position: relative;
+	margin: 1em 0 0 1em;
+	padding: 0 0 2em 4em;
+	font-size: 2em;
 }
+
+.saw h2 {
+	background: url(images/modal/saw.png) no-repeat;
+	background-size: auto 100%;
+}
+
+.wizard h2 {
+	background: url(images/modal/food.png) no-repeat;
+	background-size: auto 100%;
+}
+
+.robbers h2 {
+	background: url(images/modal/money.png) no-repeat;
+	background-size: auto 100%;
+}
+
+.more {
+	position: absolute;
+	bottom: 3px;
+}
+
+.more span {
+	display: block;
+	font-size: 1.3em;
+	padding: 4px 0 4px 42px;
+	margin-left: 15px;
+}
+
+.more span:nth-of-type(1) {
+	background: url(images/users.png) no-repeat;
+	background-size: auto 80%;
+	background-position: 0 3px;
+}
+
+.more span:nth-of-type(2) {
+	background: url(images/modal/tel.png) no-repeat;
+	background-size: auto 80%;
+	background-position: 0 3px;
+}
+
+.more span:nth-of-type(3) {
+	background: url(images/modal/geo.png) no-repeat;
+	background-size: auto 80%;
+	background-position: 0 3px;
+}
+
+.sert h2 {
+	padding: 0 0 0 0.5em;
+}
+
 
 .schedule {
 	clear: both;
 }
 
 /* Quest description */
-
-.header_description_container {
-	width: 100%;
-	height: 100%;
-	position: absolute;
-	bottom: 0;
-	z-index: 0;
-}
-
-.header_quest_description {
-	height: 70px;
-	background: url(images/saw.png) no-repeat;
-	background-size: 70px auto;
-	position: absolute;
-	left: 7%;
-	bottom: 35%;
-	padding-left: 85px;
-}
-
-.wizard .header_quest_description {
-	background: url(images/modal/food.png) no-repeat;
-	background-size: 70px auto;
-}
-
-.robbers .header_quest_description {
-	background: url(images/modal/money.png) no-repeat;
-	background-size: 70px auto;
-}
-
-.header_quest_contacts {
-	position: absolute;
-	left: 7%;
-	bottom: 7%;
-}
-
-.quests_block a:first-of-type {
-	width: 100%;
-	height: 100%;
-	background: none;
-	z-index: 10;
-	display: block;
-}
-
-.header_quest_contacts a {
-	background: url(images/modal/tel.png) no-repeat 0 2px;
-	background-size: auto 80%;
-	margin-bottom: 3px;
-}
-
-.header_quest_contacts .address_pos {
-	background: url(images/modal/geo.png) no-repeat 0 2px;
-	background-size: auto 80%;
-}
-
-.header_recomendation {
-	display: inline-block;
-	border-bottom: 1px white solid;
-}
 
 
 /* Quest block end */
