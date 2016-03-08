@@ -239,6 +239,16 @@ header nav a:nth-of-type(6) {
 	background-size: auto 100%;
 }
 
+.ship h2 {
+	background: url(images/modal/ocean-transportation.png) no-repeat;
+	background-size: auto 100%;
+}
+
+.hobbit h2 {
+	background: url(images/modal/wind-bending-tree.png) no-repeat;
+	background-size: auto 100%;
+}
+
 .more {
 	position: absolute;
 	bottom: 3px;
